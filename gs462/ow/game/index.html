@@ -1,0 +1,1390 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: medium; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.native-window #md-notification {
+    border: 1px solid #70717d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 0.8;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+.clear-btn-icon {
+    top: 8px;
+}
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>云上三城国际怀旧</title>
+</head>
+<body class='typora-export typora-export-show-outline typora-export-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#云上三城国际怀旧">《云上三城国际怀旧》</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#快速上手">快速上手</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#独创国家玩法">独创国家玩法</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1国家地图划分">1、国家地图划分</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2国家系统">2、国家系统</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3国家活动">3、国家活动</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#加强版珍兽血脉觉醒">加强版珍兽血脉觉醒</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1珍兽血脉">1、珍兽血脉</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2珍兽兽魂">2、珍兽兽魂</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3珍兽装备">3、珍兽装备</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#市面独创抢红包玩法支持高并发）">市面独创抢红包玩法（支持高并发）</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#游戏特色图片">游戏特色图片</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1独创重构珍兽系统超越市面所有版本更加丝滑细腻">1、独创重构珍兽系统，超越市面所有版本更加丝滑细腻</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2特色手工与等级无差异">2、特色手工与等级无差异</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3生活技能加强制作出打架pk增强药品">3、生活技能加强，制作出打架PK增强药品</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4各门派进行技改打破传统更加趣味新鲜">4、各门派进行技改，打破传统，更加趣味新鲜</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5一些小细节">5、一些小细节</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2 outline-item-open"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#特色玩法">特色玩法</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#1新手村-束河古镇">1、新手村-束河古镇</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2游戏货币体系狩猎点狩猎券元宝绑定元宝金币">2、游戏货币体系，狩猎点，狩猎券，元宝，绑定元宝，金币</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#3本服特色物品">3、本服特色物品</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#4许愿果兑换">4、许愿果兑换</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#5宝石回收得宝石灵气">5、宝石回收得宝石灵气</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#6全新门派技改真实有效">6、全新门派技改真实有效</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#7全新封包发包监测保证游戏公平公正无特权无会员">7、全新封包发包监测保证游戏公平公正，无特权，无会员</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#8天机锦囊系统">8、天机锦囊系统</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#9十大门派原九门派加曼陀门派">9、十大门派(原九门派加曼陀门派)</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#10红包随意发去中心化的交易系统人人都是老板模式">10、红包随意发，去中心化的交易系统，人人都是老板模式</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#11独特邮件系统">11、独特邮件系统</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#12全新副本活动所有怪物爆各种物品">12、全新副本活动，所有怪物爆各种物品</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#13全防官玩法人人可刷可以交易">13、全防官玩法人人可刷可以交易</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#14生活采药种地挖矿钓鱼可制作巨大量加成药品">14、生活采药种地挖矿钓鱼可制作巨大量加成药品</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#15武魂幻魂">15、武魂，幻魂</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#16野外boss和世界boss">16、野外BOSS和世界BOSS</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#17多宝阁玩法">17、多宝阁玩法</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#18凤凰古城玩法">18、凤凰古城玩法</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#19装备手工套装">19、装备手工套装</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#20雕纹系统">20、雕纹系统</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#21修炼系统">21、修炼系统</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#22多重玩法心法升级">22、多重玩法心法升级</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#23pk死亡原地满血满怒满气复活">23、PK死亡原地满血满怒满气复活</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#副本活动掉落">副本活动掉落</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2 outline-item-single"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#精细爆率">精细爆率</a></div><ul class="outline-children"></ul></li></ul></li></div></div><div id='write'  class=''><h1 id='云上三城国际怀旧'><span>《云上三城国际怀旧》</span></h1><blockquote><p><strong><span>本服玩法原创定制，越玩越耐玩，不是三两天的服，技术架构以及防御超越市面一切版本，细节满满，丝滑细腻，请仔细看消息提示，物品描述，弹窗信息等细节信息</span></strong></p></blockquote><p><span>游戏攻略及介绍不定时更新：</span><a href='https://gs09.signuphim.top/ow/game/index.html' target='_blank' class='url'>https://gs09.signuphim.top/ow/game/index.html</a></p><p>&nbsp;</p><h2 id='快速上手'><span>快速上手</span></h2><p><strong><span>本服宗旨：只要你肯刷，什么都能刷到，不存在会员装备，重楼装备，变态装备，生活玩家挖矿种地采药制药，产出来的东西是系统没有卖的</span></strong></p><ul><li><strong><span>新手城-束河古镇</span></strong><span> 出生地新手任务完成基础任务。</span></li><li><span>新手接待员【李铭洋】开启新手任务之旅，可在【任务 &gt; 任务追踪】勾选/取消勾选 控制快速任务导航窗口。</span></li><li><span>可以打开任务进行传送，也可打开地图看任务点</span></li><li><span>达到10级加入门派，加入门派需要进门派拜师人，并且心法也是需要后面升级的，</span></li><li><span>技能改动，增加每个门派的趣味玩法，详情请看具体的技能描述</span></li><li><span>加入完门派后，需要再加入一个国家。</span></li><li><span>每个国家都有一个主城：宋（</span><strong><span>洛阳</span></strong><span>），辽（</span><strong><span>苏州</span></strong><span>），燕（</span><strong><span>大理</span></strong><span>）</span></li><li><span>每个国家有各种官员，每个官员有不同的属性加成和职能。不同于帮派和战盟，国家是一个全新的玩法</span></li><li><span>玩家加入国家有N多福利，参加国家活动，国运，国探，国盗等都可以获取丰富的元宝，狩猎点及贵重物品</span></li><li><span>新手任务做完，根据引导完成后可以轻松升级到30级。</span></li><li><span>30级后，可以去西湖，洱海，苍山等野外场景打怪，爆20-30级的1-9星的装备，运气好的话，9星装备不会比98级的9星装备属性加成差。</span></li><li><span>打满一身闪星装备后，可以用绑定元宝打一身绑定3级4级宝石。</span></li><li><span>这个时候就可以进入各种官方副本和活动，升级超级快。爆各种非绑定元宝和贵重物品道具</span></li><li><span>本服鼓励大家多组队多邀请朋友去参加各种活动，升级打造中的产品，都会在副本活动中产出</span></li><li><span>生活散人工作室玩家可以多参加国家级的活动，这个对于产出元宝，狩猎点，非绑定贵重道具及物品有非常丰厚的奖励</span></li><li><span>本服对生活玩家友好，种地、采药、挖矿将变得更加重要，商城不售卖三精材料，且普通材料制作的手工比三精的高星率大 3 倍，此外，且药品无法购买，只能通过烹饪、制药产出，而非常强悍的药品系统，征战的大侠可能更需要依靠于后勤生活玩家的产出，生活玩家将扮演更重要和被尊敬的角色。</span></li><li><span>古墓爆燕玄玉可换8星强套装，秦皇地宫1-3级爆秦皇珠</span></li><li><span>地宫四层10倍经验，需要更加强大的装备和宝石才能刷的快</span></li><li><span>地宫以及古墓BOSS产出对应套装武器几率性产出9星武器</span></li><li><strong><span>低级、中级、高级、通用副本券可以通过刷马以及野外头目获取</span></strong></li></ul><blockquote><p><strong><span>小提示：各种等级地图山洞挂机可挂机得藏宝图，国家活动物品，元宝票，绑定元宝票等，还等什么，没有门槛挂机就可以盘活</span></strong></p></blockquote><p>&nbsp;</p><h2 id='独创国家玩法'><span>独创国家玩法</span></h2><h3 id='1国家地图划分'><span>1、国家地图划分</span></h3><p><img src="./images/nation.jpg" referrerpolicy="no-referrer" alt="国家地图"></p><ul><li><span>1、主城为三个国家各自不同的区域，主城内的 NPC 仅为本国玩家正常提供服务（国运活动建交时亦为友邦国家提供服务）</span></li><li><span>2、【神兽】所在地为主城中心位置，当两国开启国战时，此处会出现神兽，进攻方在限定时间内击杀神兽则获胜，反之防守方获胜。</span></li><li><span>3、【内政大臣】国家官员管理、任命、罢免、领取福利、申请成为国王等操作的 NPC，亦可在此 NPC 查看各官员、职位的介绍。</span></li><li><span>4、【军机大臣】（或军机）掌管对外征战的 NPC，可在此发起国战、国运、国盗、国探活动。以及领取以上活动奖励（活动时间结束后即可领取）。</span></li><li><span>5、【刺探】敌国对己国发起刺探，且活动开始时，敌国玩家通过来此 NPC 进行刺探任务。</span></li></ul><p>&nbsp;</p><h3 id='2国家系统'><span>2、国家系统</span></h3><p><strong><span>本服将玩家的管理和约束权下发给玩家，包括禁言、囚禁、不红名击杀等，可参考【国家模式】。当玩家自愿选出支持率最高的国王时，国王也会从玩家中选取合适的玩家作为官员，以帮助国民不受它国玩家欺负，为玩家谋取福利、点位等，同时也赋予对本国恶意辱骂的玩家采取禁言，对敌国奸细、本国叛徒等实施囚禁的权力。</span></strong></p><p><img src="./images/nation.jpg" referrerpolicy="no-referrer" alt="国家地图"></p><figure><table><thead><tr><th><span>主城</span></th><th><span>所属国家</span></th></tr></thead><tbody><tr><td><span>洛阳</span></td><td><span>大宋</span></td></tr><tr><td><span>大理</span></td><td><span>大燕</span></td></tr><tr><td><span>苏州</span></td><td><span>大辽</span></td></tr></tbody></table></figure><blockquote><p><strong><span>小提示：用户头像月字图标，打开便捷传送，在主城里面，可以随意花点金币飞任意地图场景</span></strong></p></blockquote><ul><li><span>国家面板信息：展示国家的组织架构，及官员数量，上下级关系，以及每个官员的属性加成</span></li></ul><p><img src="./images/country-song.jpg" referrerpolicy="no-referrer" alt="宋国国家面板"></p><ul><li><p><span>国家王储榜信息：通过竞选人人可以当国王，拥有至高无上的权利及属性，真的可以为所欲为，每人每天只能投一次票</span></p></li><li><p><span>国王的诞生：</span></p><ul><li><span>当玩家前往主城【内政大臣】处选择【申请成为国王】后，其信息会在国家面板第二页【王储榜】进行公示，每个玩家每天有且只有 1 票，可为公示中玩家点赞，当公示栏下方所示时间截止时，此榜上的最高票数玩家将成为国王。</span></li><li><span>王储榜每次仅允许最多 6 人申请。因此有志者可尽快前往，先到先得。</span></li><li><span>当国王诞生时，若其不在线，则给与其 1 天时间，若一天后仍没上线，其票数将置空，由王储榜次位顺位担任。</span></li><li><span>国民可对官员投票，通过世界产出或元宝商店获取的【举贤令】，可对点击面板上官员，对其进行投票。</span></li><li><span>国王、官员均有支持率，当支持率持续 1 天低于 30%时，国王或官员会被系统罢免，并禁止参与下任国王选举。</span></li><li><span>对官员投票时，支持率也会并入国家支持率计算，国家支持率同时影响到所有官员、玩家的国家活动奖励，请谨慎投票。</span></li></ul></li></ul><p><img src="./images/country-song-1.jpg" referrerpolicy="no-referrer" alt="国家王储榜"></p><ul><li><span>国家信息面板：主要展示国力值，国民活跃值，支持率，国家活动信息。以及公告，更多玩法和体验请稳步游戏。功能做的</span><strong><span>非常细腻</span></strong><span>，玩味无穷。、</span></li><li><span>国家面板在右侧如下图标点击： 查看国家信息，其中包括国家属性、国家活动、国王竞选信息、官员支持率等功能</span></li></ul><p><img src="./images/country-song-2.jpg" referrerpolicy="no-referrer" alt="国家信息面板"></p><ul><li><p><span>国王可与需要任命之人组队前往主城【内政大臣】处任命</span></p><figure><table><thead><tr><th><span>官位</span></th><th><span>神威上将</span></th><th><span>天策上将</span></th><th><span>钦天司命</span></th><th><span>鉴法司空</span></th></tr></thead><tbody></tbody></table></figure></li><li><p><span>国家国王、官员及其特权，皆可在主城【内政大臣】处查看打开地图可查看。</span></p></li><li><p><span>国家任务会给与大量奖励，其中国力值作为最主要奖励，国王、官员可根据国力值每日领取奖励；通过使用国力值也可对玩家进行【称号御赐】，被御赐玩家将获得持续一天的独特属性加成。</span></p></li><li><p><span>国王和某些官员可使用令牌拉令打架，天子令发布时，全国玩家（除副本、地府）皆可接到传送提示，并免费传送至国王所在地点。神威、天策令的作用可自行查看。</span></p></li><li><p><span>玩家管理：</span></p><ul><li><span>可通过聊天频道右键点击玩家名字，选择【查看资料】，或在好友列表下点搜索按钮，输入名字或 ID 查找对应玩家，点击【查看】打开其资料面板，其中可对本国职权范围内的玩家进行禁言、囚禁、解禁、释放、御赐、撤销等操作。</span></li><li><span>玩家每天最多被禁言、囚禁两次，每次最多 1 小时，请注意：禁言期间玩家请勿使用外挂或喊话器发消息，此行为一旦被检测到，面临的惩罚与外挂一致，比较重。</span></li></ul></li></ul><p>&nbsp;</p><p><span>国家官员主要又两部分构成，其中分为</span><strong><span>御赐（临时）</span></strong><span>官员及</span><strong><span>正编</span></strong><span>官员。</span></p><figure><table><thead><tr><th><span>国家官员</span></th><th><span>类型</span></th><th><span>描述</span></th></tr></thead><tbody><tr><td><span>御赐</span></td><td><span>临时</span></td><td><span>临时官员根据不同的御赐称号获得不同的属性和功能是战场上的一把利刃</span></td></tr><tr><td><span>正编</span></td><td><span>正编</span></td><td><span>1、正编官员享有对内，对外的各种特权。</span><br><span>2、每日有俸禄，辞官有补偿，是长期为从民服务的玩家模范。</span><br><span>3、同时正编官员受玩家支持率的影响，当支持率低于一定数值时，将被系统罢免</span><br><span>4、</span><strong><span>御赐官员共5个名额，可以任命5个一样的，也可以分别任命不一样的</span></strong></td></tr></tbody></table></figure><p><img src="./images/country-song.jpg" referrerpolicy="no-referrer"></p><p>&nbsp;</p><p><strong><span>官员俸禄计算方式：如10000国力值，支持率100%。国家支持率100%，折算成10万元宝计算</span></strong></p><figure><table><thead><tr><th><span>官员级别</span></th><th><span>官员</span></th><th><span>福利待遇（元宝）</span></th></tr></thead><tbody><tr><td><span>一级</span></td><td><span>国王</span></td><td><strong><span>100% x 10 x 10000 x 1 x 1 = 10万</span></strong></td></tr><tr><td><span>二级</span></td><td><span>上将</span></td><td><strong><span>60% x 10 x 10000 x 1 x 1 = 6万</span></strong></td></tr><tr><td><span>三级</span></td><td><span>司命，司空</span></td><td><strong><span>40% x 10 x 10000 x 1 x 1 = 4万</span></strong></td></tr><tr><td><span>三级</span></td><td><span>神武卫，真武侯，尚书令，天策军</span></td><td><strong><span>30% x 10 x 10000 x 1 x 1 = 3万</span></strong></td></tr><tr><td><span>四级</span></td><td><span>龙武尉，中书令</span></td><td><strong><span>20% x 10 x 10000 x 1 x 1 = 2万</span></strong></td></tr><tr><td><span>五级</span></td><td><span>普通国民</span></td><td><span>-</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><span>官员大类划分，您可继续点击查看每个官员的详细信息：</span></p><figure><table><thead><tr><th style='text-align:left;' ><span>官      员                               </span></th><th><span>人数                </span></th><th style='text-align:center;' ><span>官员官职                        </span></th><th style='text-align:left;' ><span>描述</span></th><th><span>属性加成</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>国王</span></td><td><span>1</span></td><td style='text-align:center;' ><span>正编</span></td><td style='text-align:left;' ><span>任命/罢免一品官员，</span><br><span>每天领大量元宝，</span><br><span>发布国家任务和活动</span><br><span>有效期：周六0:00~下周五23:00</span></td><td><span>1、全属性攻击+1000</span><br><span>2、血上限+50%</span><br><span>3、全属性抗性+100</span><br><span>4、天子令：将所有玩家传送到身边战斗</span></td></tr><tr><td style='text-align:left;' ><span>神威上将</span></td><td><span>1</span></td><td style='text-align:center;' ><span>正编</span></td><td style='text-align:left;' ><span>由国王任命或罢免，当国王到期卸任时，由新任国王决定是否继续任命</span><br><span>﻿</span><strong><span>每天</span></strong><span>可根据</span><strong><span>国力值</span></strong><span>和</span><strong><span>支持率</span></strong><span>领取元宝俸禄</span></td><td><span>1、攻击敌国玩家额外造成50%伤害</span><br><span>2、全属性攻击+500，血上限+20%</span><br><span>3、任命/罢免神武卫（神威）</span><br><span>4、规划、开启国战</span><br><span>5、特权物品：神威令（使用将通知下辖所有神武卫传送至身边战斗，副本除外)</span></td></tr><tr><td style='text-align:left;' ><span>钦天司命</span></td><td><span>1</span></td><td style='text-align:center;' ><span>正编</span></td><td style='text-align:left;' ><span>由国王任命或罢免，当国王到期卸任时，由新任国王决定是否继续任命</span><br><span>﻿</span><strong><span>每天</span></strong><span>可根据</span><strong><span>国力值</span></strong><span>和</span><strong><span>支持率</span></strong><span>领取元宝俸禄</span></td><td><span>1、辖所有神武卫传送至身边战斗，副本除外）所有属性+200，全展性抗+50</span><br><span>2、任命/罢免真武侯、龙武侯</span><br><span>3、﻿击杀本国玩家不计杀气</span><br><span>4、攻击本国玩家额外造成50%伤害</span></td></tr><tr><td style='text-align:left;' ><span>鉴法司空</span></td><td><span>1</span></td><td style='text-align:center;' ><span>正编</span></td><td style='text-align:left;' ><span>由国王任命或罢免，当国王到期卸任时，由新任国王决定是否继续任命</span><br><span>﻿</span><strong><span>每天</span></strong><span>可根据</span><strong><span>国力值</span></strong><span>和</span><strong><span>支持率</span></strong><span>领取元宝俸禄</span></td><td><span>1、所有属性+100，全属性抗+80</span><br><span>2、任命/罢免 尚书令、中书令</span><br><span>3、囚禁/释放（将本国玩家关入监狱，时效最多为1 小时在线时间，每天对每个玩象最多可使用2次）</span><br><span>4、﻿蔡言/解禁（禁止本国玩家发送聊天消息，时效最多为1小时在线时间，每天对每个玩家最多可使用2次）</span></td></tr><tr><td style='text-align:left;' ><span>天策上将</span></td><td><span>1</span></td><td style='text-align:center;' ><span>正编</span></td><td style='text-align:left;' ><span>由天策上将任命或罢免，当天策上将卸任时，由新任天策上将决定是否继续任命</span><br><span>﻿</span><strong><span>每天</span></strong><span>可根据</span><strong><span>国力值</span></strong><span>和</span><strong><span>支持率</span></strong><span>领取元宝俸禄</span></td><td><span>1、受敌国玩家攻击时免疫20%伤害。</span><br><span>2、全属性抗+100</span><br><span>3、体力、身法+200</span><br><span>4、﻿被动技能：游击（对敌国玩家造成伤害时，有S概率将其定身5秒。）</span></td></tr><tr><td style='text-align:left;' ><span>神武卫</span></td><td><span>5</span></td><td style='text-align:center;' ><span>正编</span></td><td style='text-align:left;' ><span>由神威上将任命或罢免，当神威上将卸任时，由新任神威上将决定是否继续任命</span><br><span>﻿</span><strong><span>每天</span></strong><span>可根据</span><strong><span>国力值</span></strong><span>和</span><strong><span>支持率</span></strong><span>领取元宝俸禄</span></td><td><span>1、攻击敌国玩象额外造成 20%伤害</span><br><span>2、全属性攻击+100，血上限+10%</span><br><span>3、被动技能：掠夺（击杀故国玩家将回血20%，击杀敌国官员回血50%，击杀敌国国王回血100%，回血后最高不超过血上限）</span></td></tr><tr><td style='text-align:left;' ><span>真武侯</span></td><td><span>1</span></td><td style='text-align:center;' ><span>正编</span></td><td style='text-align:left;' ><span>由钦天司命任命或罢免，当钦天司命卸任时，由新任钦天司命决定是否继续任命</span><br><span>﻿</span><strong><span>每天</span></strong><span>可根据</span><strong><span>国力值</span></strong><span>和</span><strong><span>支持率</span></strong><span>领取元宝俸禄</span></td><td><span>1、所有属性+100；全属性抗+200</span><br><span>2、击杀本国玩家不红名</span><br><span>3、攻击本国玩家额外造成5000点伤害</span></td></tr><tr><td style='text-align:left;' ><span>尚书令</span></td><td><span>1</span></td><td style='text-align:center;' ><span>正编</span></td><td style='text-align:left;' ><span>由鉴法司空任命或罢免，当鉴法司空卸任时，由新任鉴法司空决定是否继续任命</span><br><span>﻿</span><strong><span>每天</span></strong><span>可根据</span><strong><span>国力值</span></strong><span>和</span><strong><span>支持率</span></strong><span>领取元宝俸禄</span></td><td><span>1、所有属性+100，全属性抗+20。</span><br><span>2、特殊技能：囚禁/释放（将本国玩家关入监狱，时效最多为1小时在线时间，每天对每个玩家最多可使用2次）</span></td></tr><tr><td style='text-align:left;' ><span>天策军</span></td><td><span>1</span></td><td style='text-align:center;' ><span>正编</span></td><td style='text-align:left;' ><span>由天策上将任命或罢免，当天策上将卸任时，由新任天策上将决定是否继续任命</span><br><span>﻿</span><strong><span>每天</span></strong><span>可根据</span><strong><span>国力值</span></strong><span>和</span><strong><span>支持率</span></strong><span>领取元宝俸禄</span></td><td><span>1、受敌国玩家攻击时免疫 20% 伤害</span><br><span>2、特有属性：全属性抗+100，体力、身法+200</span><br><span>3、被动技能：游击（对敌国玩家造成伤害时，有5%概率将其定身5秒。）</span></td></tr><tr><td style='text-align:left;' ><span>龙武尉</span></td><td><span>1</span></td><td style='text-align:center;' ><span>正编</span></td><td style='text-align:left;' ><span>由钦天司命任命或罢免，当钦天司命卸任时，由新任钦大司命决定是否继续任命</span><br><span>﻿</span><strong><span>每天</span></strong><span>可根据</span><strong><span>国力值</span></strong><span>和</span><strong><span>支持率</span></strong><span>领取元宝俸禄</span></td><td><span>1、所有属性+50，全属性抗+15</span><br><span>2、击杀本国玩冢不红名</span><br><span>3、﻿攻击本国玩家额外造成3000点伤害</span></td></tr><tr><td style='text-align:left;' ><span>中书令</span></td><td><span>1</span></td><td style='text-align:center;' ><span>正编</span></td><td style='text-align:left;' ><span>由鉴法司空任命或罢免，当鉴法司空卸任时，由新任鉴法司空决定是否继续任命</span><br><span>﻿</span><strong><span>每天</span></strong><span>可根据</span><strong><span>国力值</span></strong><span>和</span><strong><span>支持率</span></strong><span>领取元宝俸禄</span></td><td><span>1、所有属性+50，全属性抗+15</span><br><span>2、特珠技能：禁言/解禁（禁止本国玩家发送包括小喇叭、聊天的消息，时效最多为1小时在线时间，每天对每个玩家最多可使用2次）</span></td></tr><tr><td style='text-align:left;' ><span>救世主</span></td><td><span>&lt;6</span></td><td style='text-align:center;' ><span>御赐</span></td><td style='text-align:left;' ><span>消耗350点国力值，称号1天有效，过期自动下架</span></td><td><span>每3秒对周围最多5个友好目标（除自己外〕进行救赎，驱散所有负面效果</span></td></tr><tr><td style='text-align:left;' ><span>哥布林</span></td><td><span>&lt;6</span></td><td style='text-align:center;' ><span>御赐</span></td><td style='text-align:left;' ><span>消耗200点国力值，称号1天有效，过期自动下架</span></td><td><span>专为掠夺而生，国战中对敌国神兽造成20 倍伤害。</span></td></tr><tr><td style='text-align:left;' ><span>杠精</span></td><td><span>&lt;6</span></td><td style='text-align:center;' ><span>御赐</span></td><td style='text-align:left;' ><span>消耗200点国力值，称号1天有效，过期自动下架</span></td><td><span>公认的杠精本杠使用‘小喇叭’发言时不需要消耗小喇叭道具。</span></td></tr><tr><td style='text-align:left;' ><span>狼人</span></td><td><span>&lt;6</span></td><td style='text-align:center;' ><span>御赐</span></td><td style='text-align:left;' ><span>消耗150点国力值，称号1天有效，过期自动下架</span></td><td><span>比狠人还多一点，死亡后原地复活的花贵降低 80%。</span></td></tr><tr><td style='text-align:left;' ><span>阿油</span></td><td><span>&lt;6</span></td><td style='text-align:center;' ><span>御赐</span></td><td style='text-align:left;' ><span>消耗100点国力值，称号1天有效，过期自动下架</span></td><td><span>打歌舞都控不住的人，免疫所有的控制效果。</span></td></tr><tr><td style='text-align:left;' ><span>Sigma男人</span></td><td><span>&lt;6</span></td><td style='text-align:center;' ><span>御赐</span></td><td style='text-align:left;' ><span>消耗300点国力值，称号1天有效，过期自动下架</span></td><td><span>如贺钓帝般不为世俗所困的男子，不可乘坐坐骑，步行速度 +90%。</span></td></tr><tr><td style='text-align:left;' ><span>千里眼</span></td><td><span>&lt;6</span></td><td style='text-align:center;' ><span>御赐</span></td><td style='text-align:left;' ><span>消耗150点国力值，称号1天有效，过期自动下架</span></td><td><span>麦克阿瑟借你的慧眼，能识破所有级别的隐身，包括半飘，对半飘造成的伤害翻倍。</span></td></tr><tr><td style='text-align:left;' ><span>半飘</span></td><td><span>&lt;6</span></td><td style='text-align:center;' ><span>御赐</span></td><td style='text-align:left;' ><span>消耗300点国力值，称号1天有效，过期自动下架</span></td><td><span>在没干里眼之前，人们一度以为这是阿飘。持续隐身，不可驱散，除千里眼外皆不可误破，不可骑乘，死亡后一小时自动恢复隐身。</span></td></tr><tr><td style='text-align:left;' ><span>国民</span></td><td><span>N</span></td><td style='text-align:center;' ><span>-</span></td><td style='text-align:left;' >&nbsp;</td><td>&nbsp;</td></tr><tr><td style='text-align:left;' ><span>流民</span></td><td><span>N</span></td><td style='text-align:center;' ><span>-</span></td><td style='text-align:left;' >&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><p><span>PK规则</span></p><blockquote><p><strong><span>小技巧：指定国战目标国互为敌国，需要国王发起</span></strong></p></blockquote><figure><table><thead><tr><th><span>身份</span></th><th><span>杀气获得</span></th></tr></thead><tbody><tr><td><span>有国家</span></td><td><span>击杀本国非国家模式： 1点杀气</span><br><span>击杀本国国家模式：2点杀气</span><br><span>被击杀带剑（杀气值为负数）时，击杀获得对方杀气绝对值的额外杀气</span><br><span>任何情况下击杀敌国玩家不计杀气</span><br><span>司命系列官员击杀本国玩家不计杀气</span></td></tr><tr><td><span>无国家(流民)</span></td><td><span>杀人，被杀 任何情况下都 不计杀气</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><blockquote><p><strong><span>小提示：</span></strong>
+<strong><span>转国籍：</span></strong>
+<strong><span>1、累计被禁言/囚禁 10次及以上，可直接注销国籍</span>
+<span>2、购买 辞国书 可注销国籍</span></strong></p></blockquote><p>&nbsp;</p><h3 id='3国家活动'><span>3、国家活动</span></h3><p><strong><span>国家活动奖励丰厚，且每天每个活动仅能发起一次，先到先得，故上述官员在获得此物品后应尽快前往抢先发起，以免错失良机。</span></strong></p><figure><table><thead><tr><th><span>物品</span></th><th><span>获得</span></th><th><span>作用</span></th></tr></thead><tbody><tr><td><span>国令·探                         </span></td><td><span>野外刷怪可获得                                          </span></td><td><span>【国王、神威上将、天策上将】持有并前往【军机大臣】处选择目标国家并发起对应活动，非上述官员当获得此类物品时，请尽快【点击右键】使用，使用后物品会自动通过物品邮件发送至本国对应三个上述官员，上述任意官员领取后此邮件即消失。</span></td></tr><tr><td><span>国令·战</span></td><td><span>野外刷怪可获得</span></td><td><span>【国王、神威上将、天策上将】持有并前往【军机大臣】处选择目标国家并发起对应活动，非上述官员当获得此类物品时，请尽快【点击右键】使用，使用后物品会自动通过物品邮件发送至本国对应三个上述官员，上述任意官员领取后此邮件即消失。</span></td></tr><tr><td><span>国令·盗</span></td><td><span>野外刷怪可获得</span></td><td><span>【国王、神威上将、天策上将】持有并前往【军机大臣】处选择目标国家并发起对应活动，非上述官员当获得此类物品时，请尽快【点击右键】使用，使用后物品会自动通过物品邮件发送至本国对应三个上述官员，上述任意官员领取后此邮件即消失。</span></td></tr><tr><td><span>国令·运</span></td><td><span>野外刷怪可获得</span></td><td><span>【国王、神威上将、天策上将】持有并前往【军机大臣】处选择目标国家并发起对应活动，非上述官员当获得此类物品时，请尽快【点击右键】使用，使用后物品会自动通过物品邮件发送至本国对应三个上述官员，上述任意官员领取后此邮件即消失。</span></td></tr></tbody></table></figure><p>&nbsp;</p><blockquote><p><strong><span>小提示：</span></strong>
+<strong><span>1、国家活动和国家上线活跃人数有直接关系，人数越多，国力值越大，活跃度越大，和奖励是有系数关系的</span></strong></p><p>&nbsp;</p></blockquote><p>&nbsp;</p><figure><table><thead><tr><th><span>活动名称                                    </span></th><th><span>需要 物品                                     </span></th><th><span>活动说明</span></th><th><span>活动限制</span></th></tr></thead><tbody><tr><td><span>国刺</span></td><td><span>国令·探 </span></td><td><span>1、国探期间，发起国的玩家前往被发起国主城，找到【刺探】的 NPC 之一，点击交互进行刺探。</span><br><span>2、刺探分为白、绿、蓝、粉、金五个等级，在刺探完成后会显示在玩家名字上方，等级越靠后，获得的奖励及国力值越多，可在活动结束时前往【军机大臣】处</span><strong><span>领取奖励</span></strong><br><span>3、刺探可多次，直达获得自己满意的品质为止，刺探能获得更多的</span><strong><span>经验</span></strong><br><span>4、被发起国玩家前往击杀头顶有刺探标识的玩家，则其刺探成果被夺取，击杀者可凭头顶状态等级在活动结束时前往【军机大臣】处领取奖励，此外，击杀低于当前等级的玩家不会降低等级，而击杀高于当前等级的玩家会更新至更高等级。</span></td><td><span>每日 20：00 前发起，20：00 开始，在 21：00 结束</span></td></tr><tr><td><span>国战</span></td><td><span>国令·战</span></td><td><span>1、国战发起方为进攻方，被发起方为防御方，进攻方需前往对方主城，在 60 分钟内完成击杀对方【护国神兽】，即视为胜利，并奖励</span><strong><span>最高 1万点国力值</span></strong><span>（受对方国力值存量影响）</span><br><span>2、若 60 分钟后仍未成功击杀对方护国神兽，则防守方胜利，并获得</span><strong><span>最高 1万点国力值</span></strong><span>奖励（受进攻方国力值存量影响）</span><br><span>3、国战结束后参与的玩家可到军机大臣处论功行赏</span><br><span>4、</span><strong><span>小提示：天子令、神威令、天策令在活动中能起至关重要的作用，这就考验官员的战术了</span></strong></td><td><span>每天 21：00 前，21：00 正式开始，为期 60 分钟</span></td></tr><tr><td><span>国运</span></td><td><span>国令·运</span></td><td><span>1、国运为建交活动，参与国运的双方玩家，在【国运】处开始漕运，并缴纳一定的押金，押金档次越高，每环获得的奖励越多，获得高品质的概率也越大。</span><br><span>2、国运期间两国交好，因此不会互相红名。</span><br><span>3、国运期间两国 NPC 亦为对方提供相同的功能。</span><br><span>4、国运玩家在每次跑漕时都会更新本次货物品质，也分上述 5 种，可以在国家边境【黑市商人】处免费更换品质，品质越高，获得的收益越高，同时，漕运日（周日）获得的收益及国力值翻倍，携带【漕运路引】的玩家在提交货物时收益翻倍。</span><br><span>5、漕运期间，第三个国家玩家可劫漕，被击杀玩家损失货物和部分押金，在哪个国家境内，则哪个国家损失此玩家当前携带货物价值对应的国力值，杀方获得等价的押金和货物。</span></td><td><span>每天的 22：00 前发起，22：00 开始，在 23：00 结束</span></td></tr><tr><td><span>国盗</span></td><td><span>国令·盗</span></td><td><span>1、国盗期间，发起国玩家前往被发起国主城，找到【任意 NPC】进行盗窃，盗窃与刺探一样分五个等级奖励，可反复多次行窃，盗窃能获得更多的</span><strong><span>元宝</span></strong><br><span>2、被发起国玩家前往击杀头顶有盗窃标识的玩家，能获得与国运相同的效果。</span></td><td><span>每天的 18：00 前发起，18：00 开始，在 20：00 结束</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><span>活动介绍及奖励</span></p><figure><table><thead><tr><th><span>活动</span></th><th><span>奖励</span></th></tr></thead><tbody><tr><td><span>国运</span></td><td><span>国力值、元宝、经验、物品（上不封顶）</span></td></tr><tr><td><span>国战</span></td><td><span>国力值、元宝、物品 （重国力值，最高1万点）</span></td></tr><tr><td><span>国盗</span></td><td><span>国力值、元宝、经验、物品 （侧重元宝）</span></td></tr><tr><td><span>国探</span></td><td><span>国力值、元宝、经验、物品（侧重经验）</span></td></tr></tbody></table></figure><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><h2 id='加强版珍兽血脉觉醒'><span>加强版珍兽血脉觉醒</span></h2><p><strong><span>本服宠物系统重写，宠物在加强的同时，新增了很多独特的玩法，具体可参照【珍兽血脉】【珍兽兽魂】【珍兽装备】。宠物不再受限于携带等级和外形，所有的宠物都没有携带等级，商城不售卖宠物，宠物都自己去玄武岛或圣兽山抓取。提升至顶级后资质都大同小异，所以玩家可以自愿怀旧，想带变异老虎、松鼠螳螂的都可以自由选择。</span></strong></p><blockquote><p><strong><span>小提示：珍兽满血脉，一个出战，一个兽魂附体，加成是双倍，还带减抗，可以藐视一切，但满血脉也是有点难度的</span></strong></p></blockquote><ul><li><p><span>稀有度需在束河古镇【云渺渺】（珍兽）处选择资质提升，将当前阶段成长洗练至完美后，珍兽即可渡劫，渡劫完成后稀有度将提升，渡劫失败将随机降低或宠物消失。</span></p></li><li><p><span>血脉值仅可自行提升，通过以下方式：</span></p><ul><li><p><span>珍兽提取：成年珍兽根骨&gt;0，并前往束河古镇【云霏霏】（珍兽）处选择【提升珍兽血脉】功能，按提示完成血脉提升。</span></p></li><li><p><span>兽灵碎片：在新手任务中会赠送，活动、天龙宝库、世界 Boss 等获得，</span></p><ul><li><span>其使用方式如下：打出一只成年宠物，选中它并右键使用兽灵碎片，即可开始提取血脉。提取后该宠物的【根骨值】将被计入此物品，当此物品内存有血脉值时，无论多少，可右键使用并选择已出战珍兽，或先选中已出战珍兽后右键使用，血脉的增加不是 100%成功的，可在使用时查看确定框内的提示。</span></li></ul></li><li><p><span>破碎的兽骨：在每日宝箱中极大概率会免费产出，也可在天龙宝库、各 Boss、宝箱、头目、多宝阁获得，其操作与兽灵碎片一样，区别在于容量仅有兽灵碎片的 1/10。</span></p></li></ul></li></ul><p>&nbsp;</p><figure><table><thead><tr><th><span>破碎的兽骨</span></th></tr></thead><tbody><tr><td><img src="./images/pet-11.jpg" referrerpolicy="no-referrer" alt="破碎的兽骨"></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td><span>兽灵碎片</span></td></tr><tr><td><img src="./images/pet-12.jpg" referrerpolicy="no-referrer" alt="兽灵碎片"></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><h3 id='1珍兽血脉'><span>1、珍兽血脉</span></h3><p><strong><span>小提示：血脉顶级数值 1970，多了不退。如果现在是1960，你要使用一个兽灵碎片(500/500)，这个时候使用成功了，这个道具也会消失。数值会是1970</span></strong></p><p>&nbsp;</p><figure><table><thead><tr><th><span>初级珍兽</span></th></tr></thead><tbody><tr><td><img src="./images/pet-00.jpg" referrerpolicy="no-referrer" alt="初级珍兽"></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td><span>血脉觉醒珍兽</span></td></tr><tr><td><img src="./images/pet-1.jpg" referrerpolicy="no-referrer" alt="血脉觉醒珍兽"></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr></tbody></table></figure><blockquote><p><strong><span>血脉觉醒的前提条件是：珍兽幻化</span></strong></p></blockquote><p><span>作为新玩法的全新宠物系统，介绍篇幅可能略长</span></p><p><strong><span>珍兽资质成长血脉人物加成</span></strong></p><figure><table><thead><tr><th><span>稀有度</span></th><th><span>悟性1-10加成</span></th><th><span>灵性1-10加成</span></th><th><span>成长率资质加成</span></th><th><span>血脉给人物属性加成（出战融魂生效）</span></th></tr></thead><tbody><tr><td><span>常见</span></td><td><span>1%-31%</span></td><td><span>1%-39.3%</span></td><td><span>1%-50%</span></td><td><strong><span>44%</span></strong></td></tr><tr><td><span>稀有</span></td><td><span>3%-33%</span></td><td><span>2%-40%</span></td><td><span>51%-75%</span></td><td><strong><span>58%</span></strong></td></tr><tr><td><span>百里挑一</span></td><td><span>5%-35%</span></td><td><span>3%-41%</span></td><td><span>76%-100%</span></td><td><strong><span>72%</span></strong></td></tr><tr><td><span>千载难逢</span></td><td><span>7%-37%</span></td><td><span>4%-43%</span></td><td><span>101%-150%</span></td><td><strong><span>86%</span></strong></td></tr><tr><td><span>万年不遇</span></td><td><span>9%-42%</span></td><td><span>5%-45%</span></td><td><span>151%-200%</span></td><td><strong><span>100%</span></strong></td></tr></tbody></table></figure><p><strong><span>血脉加成</span></strong></p><figure><table><thead><tr><th><span>加成</span></th><th><span>数值</span></th></tr></thead><tbody><tr><td><span>所有属性+</span></td><td><span>3-300</span></td></tr><tr><td><span>冰火玄毒 攻+</span></td><td><span>15-799</span></td></tr><tr><td><span>冰火玄毒 加+</span></td><td><span>2-299</span></td></tr><tr><td><span>冰火玄毒 减抗+</span></td><td><span>5-299</span></td></tr><tr><td><span>血脉等级压制伤害+</span></td><td><span>200-9605</span></td></tr></tbody></table></figure><p>&nbsp;</p><p><strong><span>血脉觉醒的前提条件是：珍兽幻化</span></strong><span>，可以开始血脉觉醒，加成更多，灵性和悟性的提法和官方一致，在束河古镇珍兽NPC完成，完成以下可以进行血脉觉醒</span></p><p>&nbsp;</p><figure><table><thead><tr><th><span>血脉觉醒材料</span></th><th><span>获取途径</span></th></tr></thead><tbody><tr><td><span>残缺的兽骨(0/50)</span></td><td><span>副本，活动，野外大小BOSS都有获得</span></td></tr><tr><td><span>兽灵碎片(0/500)</span></td><td><span>天龙宝库抽奖获得</span></td></tr></tbody></table></figure><p>&nbsp;</p><figure><table><thead><tr><th><span>血脉觉醒材料</span></th><th><span>存储值</span></th><th><span>获取存储值途径</span></th></tr></thead><tbody><tr><td><span>残缺的兽骨(50/50)</span></td><td><span>50</span></td><td><span>采药钓鱼挖矿种植刷马得神秘龙骸在野外场景使用+</span><strong><span>和平徽章x10</span></strong><span> 兑换一个 或者 抓成年珍兽按根骨算值存储</span><br><strong><span>小提示：假如一个成年珍兽有6个根骨，右键残缺的兽骨再选中目标成年的，可以将其根骨100%存入残缺的兽骨</span></strong></td></tr><tr><td><span>兽灵碎片(500/500)</span></td><td><span>500</span></td><td><span>天龙宝库抽奖获得 兽灵碎片(0/500)，同样可以抓取成年珍兽将500点存满 ，再使用。</span><br><strong><span>小提示：兽灵碎片集满和没集满，玩法都是和兽骨一样，有机率成功</span></strong></td></tr><tr><td><span>成年珍兽（带根骨）</span></td><td><span>1-12</span></td><td><span>限时地图 玄武岛 抓成年，限制地图圣兽山 只出宝宝</span></td></tr></tbody></table></figure><blockquote><p><strong><span>1、血脉觉醒，需要点击存储有值的 残缺的兽骨 和 兽灵碎片 点击右键，往出战的珍兽上使用，有一定机率失败，失败会掉回使用前的值减去当前使用值。如：你使用前珍兽是100，使用的是50/50，失败会变成50，成功则是150</span></strong></p><p><strong><span>2、兽灵碎片和上面的一致，如果存满的话，失败则减500，成功则加500</span></strong></p><p><strong><span>3、小提示：每次使用的时候确认框里面有本次成功的机率，可以拿存储值较少的先将成功机率刷高，再使用满值的</span></strong></p><p><strong><span>4、存储值不一定要存储满才能使用，成功与失败则是加与减对应的存储值</span></strong></p><p><strong><span>5、小提示：神秘龙骸开出隐藏NPC【陈学思】，在他消失前打死他会返还扣除的和平徽章x10，后期陈学思还有更多神秘物品或者神秘商店可供选择，请持续关注游戏动态</span></strong></p></blockquote><p>&nbsp;</p><h3 id='2珍兽兽魂'><span>2、珍兽兽魂</span></h3><p><span>材料：青丘副本，BOSS，多宝阁</span></p><p>&nbsp;</p><h3 id='3珍兽装备'><span>3、珍兽装备</span></h3><p><span>材料：刷星副本产出，青丘副本</span></p><p>&nbsp;</p><h2 id='市面独创抢红包玩法支持高并发）'><span>市面独创抢红包玩法（支持高并发）</span></h2><ul><li><span>全服抢红包，全国家抢红包，私发红包，场景红包，队伍红包，红包可发送在游戏中打怪，打BOSS获得的私有狩猎点，元宝，金币</span></li></ul><p><img src="./images/money-bag-1.jpg" referrerpolicy="no-referrer" alt="红包发送1"><span>  </span><img src="./images/money-bag-2.jpg" referrerpolicy="no-referrer" alt="红包发送2"><span>  </span><img src="./images/money-bag-3.jpg" referrerpolicy="no-referrer" alt="红包发送3"><span> </span></p><p>&nbsp;</p><ul><li><span>发放的狩猎码，由活动或者系统红包赠送的，点击系统消息，复制狩猎码填写到天龙宝库里面进行兑换</span></li></ul><p><img src="./images/money-bag-4.jpg" referrerpolicy="no-referrer" alt="红包系统1"></p><p><img src="./images/money-bag-4-1.jpg" referrerpolicy="no-referrer" alt="红包系统2"></p><p><img src="./images/money-bag-7.jpg" referrerpolicy="no-referrer" alt="红包系统4"></p><p><img src="./images/money-bag-5.jpg" referrerpolicy="no-referrer" alt="红包系统3"></p><ul><li><span>给别人私发红包，需要查看别人的ID号，并填写进去才能发</span></li></ul><p><img src="./images/money-bag-6.jpg" referrerpolicy="no-referrer" alt="红包系统4"></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><h2 id='游戏特色图片'><span>游戏特色图片</span></h2><p>&nbsp;</p><h3 id='1独创重构珍兽系统超越市面所有版本更加丝滑细腻'><span>1、独创重构珍兽系统，超越市面所有版本更加丝滑细腻</span></h3><p><img src="./images/pet-3.jpg" referrerpolicy="no-referrer" alt="珍兽功能3"></p><p><img src="./images/pet-4.jpg" referrerpolicy="no-referrer" alt="珍兽功能4"></p><p><img src="./images/pet-5.jpg" referrerpolicy="no-referrer" alt="珍兽功能5"></p><p><img src="./images/pet-6.jpg" referrerpolicy="no-referrer" alt="珍兽功能6"></p><p><img src="./images/pet-7.jpg" referrerpolicy="no-referrer" alt="珍兽功能7"></p><p><img src="./images/pet-1.jpg" referrerpolicy="no-referrer" alt="珍兽功能1"></p><p><img src="./images/pet-2.jpg" referrerpolicy="no-referrer" alt="珍兽功能2"></p><p><img src="./images/pet-8.jpg" referrerpolicy="no-referrer" alt="珍兽功能8"></p><p><img src="./images/pet-9.jpg" referrerpolicy="no-referrer" alt="珍兽功能9"></p><p><img src="./images/pet-10.jpg" referrerpolicy="no-referrer" alt="珍兽功能10"></p><h3 id='2特色手工与等级无差异'><span>2、特色手工与等级无差异</span></h3><p><img src="./images/weapon-1.jpg" referrerpolicy="no-referrer" alt="手工装备1"><img src="./images/weapon-2.jpg" referrerpolicy="no-referrer" alt="手工装备2"><img src="./images/weapon-3.jpg" referrerpolicy="no-referrer" alt="手工装备3"><img src="./images/weapon-4.jpg" referrerpolicy="no-referrer" alt="手工装备4"><img src="./images/weapon-5.jpg" referrerpolicy="no-referrer" alt="手工装备5"></p><p>&nbsp;</p><p><img src="./images/weapon-6.jpg" referrerpolicy="no-referrer" alt="套装装备6"><img src="./images/weapon-7.jpg" referrerpolicy="no-referrer" alt="套装装备7"><img src="./images/weapon-8.jpg" referrerpolicy="no-referrer" alt="套装装备8"><img src="./images/weapon-9.jpg" referrerpolicy="no-referrer" alt="套装装备9"><img src="./images/weapon-10.jpg" referrerpolicy="no-referrer" alt="套装装备10"></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><h3 id='3生活技能加强制作出打架pk增强药品'><span>3、生活技能加强，制作出打架PK增强药品</span></h3><p><img src="./images/ability-1.jpg" referrerpolicy="no-referrer" alt="制药产品1"></p><p><img src="./images/ability-2.jpg" referrerpolicy="no-referrer" alt="制药产品1"></p><p><img src="./images/ability-3.jpg" referrerpolicy="no-referrer" alt="烹饪产品1"></p><p><img src="./images/ability-4.jpg" referrerpolicy="no-referrer" alt="烹饪产品2"></p><p>&nbsp;</p><p>&nbsp;</p><h3 id='4各门派进行技改打破传统更加趣味新鲜'><span>4、各门派进行技改，打破传统，更加趣味新鲜</span></h3><p><img src="./images/skill-1.jpg" referrerpolicy="no-referrer" alt="技能改动1"><img src="./images/skill-2.jpg" referrerpolicy="no-referrer" alt="技能改动2"><img src="./images/skill-3.jpg" referrerpolicy="no-referrer" alt="技能改动3"><img src="./images/skill-4.jpg" referrerpolicy="no-referrer" alt="技能改动4"></p><p><img src="./images/skill-5.jpg" referrerpolicy="no-referrer" alt="技能改动5"><img src="./images/skill-6.jpg" referrerpolicy="no-referrer" alt="技能改动6"><img src="./images/skill-7.jpg" referrerpolicy="no-referrer" alt="技能改动7"><img src="./images/skill-8.jpg" referrerpolicy="no-referrer" alt="技能改动8"></p><p><img src="./images/skill-9.jpg" referrerpolicy="no-referrer" alt="技能改动9"><img src="./images/skill-10.jpg" referrerpolicy="no-referrer" alt="技能改动10"><img src="./images/skill-12.jpg" referrerpolicy="no-referrer" alt="技能改动12"><img src="./images/skill-13.jpg" referrerpolicy="no-referrer" alt="技能改动13"></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><blockquote><p><strong><span>小提示：展示部分门派技改，消耗怒气，更多门派技改，请进游戏详细体验</span></strong></p></blockquote><p>&nbsp;</p><h3 id='5一些小细节'><span>5、一些小细节</span></h3><ul><li><span>生活玩家野外挂机刷材料可以设置自动升级，自动使用物品等</span></li></ul><p><img src="./images/game-1.jpg" referrerpolicy="no-referrer" alt="内挂自动升级"></p><p>&nbsp;</p><ul><li><span>封包外挂作弊监控系统，需要去监狱捞人</span></li></ul><p><img src="./images/game-2.jpg" referrerpolicy="no-referrer" alt="封包外挂监控系统"></p><p>&nbsp;</p><ul><li><span>生活玩家挖矿，采药，钓鱼，刷马等会获得神秘龙骸，可以获得珍兽血脉觉醒所需要的残缺的兽骨</span></li></ul><p><img src="./images/game-3.jpg" referrerpolicy="no-referrer" alt="生活玩家挖宝系统"></p><p>&nbsp;</p><p>&nbsp;</p><h2 id='特色玩法'><span>特色玩法</span></h2><p>&nbsp;</p><h3 id='1新手村-束河古镇'><span>1、新手村-束河古镇</span></h3><ul><li><span>1、束河古镇集合所有的功能、副本、活动 NPC，而原洛阳、苏州、大理的 NPC 皆已删除。</span></li><li><span>2、束河古镇【中心广场】处为摆摊区，玩家可在此区域进行【金币摆摊】</span></li><li><span>3、束河古镇【比武】所在整个平台为挑战区，玩家可在此处与其他玩家比武，比武后状态、技能会自动全部刷新。</span></li><li><span>4、束河古镇【南市大街】为副本区，玩家可在此组队前往副本，注意：为减轻副本羁绊，随副本不同需使用不同等级的副本入场券（或通用副本券）进入副本。副本入场券在多宝阁、野外、宝箱、活动等均有掉落。</span></li><li><span>5、束河古镇【西市】、【北市】为打造功能区，您熟知的打造 NPC 都在这附近。</span></li><li><span>6、束河古镇【商会】处正常开放玩家商店，【元宝】处可进入钱庄，其内可使用元宝摆摊。</span></li></ul><p><img src="./images/main.jpg" referrerpolicy="no-referrer"></p><p>&nbsp;</p><h3 id='2游戏货币体系狩猎点狩猎券元宝绑定元宝金币'><span>2、游戏货币体系，狩猎点，狩猎券，元宝，绑定元宝，金币</span></h3><figure><table><thead><tr><th><span>货币名称</span></th><th><span>货币功能</span></th><th><span>说明</span></th></tr></thead><tbody><tr><td><span>狩猎点（点数）</span></td><td><span>兑换元宝，购买狩猎券抽奖</span></td><td><span>通过红包、宝箱、世界BOSS获取</span></td></tr><tr><td><span>元宝</span></td><td><span>狩猎点（点数）直接兑换</span></td><td><span>游戏里面可以刷</span></td></tr><tr><td><span>绑定元宝</span></td><td><span>主要用来购买绑定元宝商城物品</span></td><td><span>游戏里面大量获得</span></td></tr><tr><td><span>金币</span></td><td><span>主要用来日常消费，快捷传送，出监狱，罚款，点心法等</span></td><td><span>-</span></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><h3 id='3本服特色物品'><span>3、本服特色物品</span></h3><figure><table><thead><tr><th><span>物品名称</span></th><th><span>物品图示</span></th></tr></thead><tbody><tr><td><span>狩猎券·烫金</span></td><td><img src="./images/item1.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>狩猎券·月尘</span></td><td><img src="./images/item2.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>狩猎券·游龙</span></td><td><img src="./images/item3.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>狩猎券·至尊</span></td><td><img src="./images/item4.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>辞国书</span></td><td><img src="./images/item9 .jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>国令·战</span></td><td><img src="./images/item10.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>国令·探</span></td><td><img src="./images/item11.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>国令·盗</span></td><td><img src="./images/item12.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>国令·运</span></td><td><img src="./images/item13.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>天子令</span></td><td><img src="./images/item5.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>神威令</span></td><td><img src="./images/item6.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>天策令</span></td><td><img src="./images/item7.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>举贤令</span></td><td><img src="./images/item8.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>赦令文书（一）</span></td><td><img src="./images/item37.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>赦令文书（二）</span></td><td><img src="./images/item38.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>赦令文书（三）</span></td><td><img src="./images/item39.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>赦令文书（四）</span></td><td><img src="./images/item40.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>赦令文书（六）</span></td><td><img src="./images/item41.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>赦令文书（五）</span></td><td><img src="./images/item42.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>赦令文书（七）</span></td><td><img src="./images/item43.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>仙丹彩溪</span></td><td><img src="./images/item25.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>仙丹赤霞</span></td><td><img src="./images/item24.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>仙丹清鳞</span></td><td><img src="./images/item23.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>思莲甘梅散</span></td><td><img src="./images/item22.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>莹彻琉璃散</span></td><td><img src="./images/item21.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>哈巴塔卡散</span></td><td><img src="./images/item20.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>冰参雪莲散</span></td><td><img src="./images/item19.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>千锤百炼散</span></td><td><img src="./images/item17.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>九转通天散</span></td><td><img src="./images/item18.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>金风玉露散</span></td><td><img src="./images/item16.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>三星彻地散</span></td><td><img src="./images/item15.jpg" referrerpolicy="no-referrer"></td></tr><tr><td><span>闻香不待散</span></td><td><img src="./images/item14.jpg" referrerpolicy="no-referrer"></td></tr></tbody></table></figure><p>&nbsp;</p><p>&nbsp;</p><h3 id='4许愿果兑换'><span>4、许愿果兑换</span></h3><p><span>束河古镇的中心广场处，可以拿愿灵泉进行许愿，许愿可以兑换好多物品</span></p><p><span>愿灵泉的出处请参考 爆率明细</span></p><h3 id='5宝石回收得宝石灵气'><span>5、宝石回收得宝石灵气</span></h3><p><span>不想要的宝石可以不要卖系统，可以前往束河古镇【卦】字处，进行将宝石回收，获得的宝石灵气，可以兑换1-7级的宝石。</span></p><blockquote><p><strong><span>小提醒：回收宝石的时候，默认是直接回收【材料栏】前10格的，切记不要放其他非宝石物品，以免被误删</span></strong></p></blockquote><p>&nbsp;</p><p>&nbsp;</p><h3 id='6全新门派技改真实有效'><span>6、全新门派技改真实有效</span></h3><p><strong><span>以下是改为怒气技能并且怒气值扣除会有所调整，其他主要攻击技能都有所改动，详情请移步游戏具体看技能描述和体验</span></strong></p><blockquote><p><strong><span>小提示：没有一次性扣除满怒的技能了，所有技能扣除怒气值都有所调整</span></strong></p></blockquote><figure><table><thead><tr><th><span>门派</span></th><th><span>技改1</span></th><th><span>技改2</span></th><th><span>技改3</span></th><th><span>技改4</span></th><th><span>技改5</span></th><th><span>技改6</span></th></tr></thead><tbody><tr><td><span>明教</span></td><td><span>怒发冲冠</span></td><td><span>火焰连环斩</span></td><td><span>坐地求全</span></td><td><span>无中生有</span></td><td><span>烽火连城</span></td><td><span>怒火连斩</span></td></tr><tr><td><span>丐帮</span></td><td><span>亢龙有悔</span></td><td><span>神龙摆尾</span></td><td><span>龙战于野</span></td><td><span>横扫乾坤</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>天山</span></td><td><span>移花接木</span></td><td><span>阳歌天钧</span></td><td><span>阳春白雪</span></td><td><span>阳关三叠</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>少林</span></td><td><span>如来神掌</span></td><td><span>明镜台</span></td><td><span>金刚不坏体</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>逍遥</span></td><td><span>排山倒海</span></td><td><span>波澜不惊</span></td><td><span>惊涛骇浪</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>峨眉</span></td><td><span>拖泥带水</span></td><td><span>行尸走肉</span></td><td><span>呆若木鸡</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>天龙</span></td><td><span>指点江山</span></td><td><span>万岳朝宗</span></td><td><span>非枯非荣</span></td><td><span>百步穿杨</span></td><td><span>中冲剑</span></td><td>&nbsp;</td></tr><tr><td><span>星宿</span></td><td><span>玉碎昆岗</span></td><td><span>金石俱焚</span></td><td><span>天地同寿</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>武当</span></td><td><span>白鹤亮翅</span></td><td><span>太渊十三剑</span></td><td><span>无懈可击</span></td><td><span>游刃有余</span></td><td><span>仙风道骨</span></td><td>&nbsp;</td></tr><tr><td><span>曼陀</span></td><td><span>并蒂生</span></td><td><span>风入松</span></td><td><span>广陵散</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><h3 id='7全新封包发包监测保证游戏公平公正无特权无会员'><span>7、全新封包发包监测保证游戏公平公正，无特权，无会员</span></h3><p><span>为保证大家安全、合理娱乐，本服独创安全系统，将全方位自动监测游戏的健康运行，并会自动惩罚恶意行为玩家，包括但不限于：辱骂、外挂、发包器、DDos 攻击、修改客户端、试图卡物品、卡 Buff 等行为。</span></p><p><span>请勿使用小蜜、情缘等外挂程序，可能会面临监禁风险。</span></p><p><span>若使用鼠标宏、连点器等，请设置好速度，以免被安全系统误判为 DDos 或发包程序。</span></p><p><span>若被安全系统监禁，请立即关闭外挂软件，以免进一步封号或封 IP、机器码。</span></p><p><span>被监禁玩家，若无金币缴纳罚金，可尝试联系他人代为处理违规行为，当涉及严重违规行为时，罚金超出可携带上限时，</span></p><p><span>请联系本国国王，由国王通过右上角 GM 图标反馈信息，并在人工查看行为日志后裁定。</span></p><p>&nbsp;</p><h3 id='8天机锦囊系统'><span>8、天机锦囊系统</span></h3><p><span>全新设计优化的天机锦囊，</span></p><p>&nbsp;</p><h3 id='9十大门派原九门派加曼陀门派'><span>9、十大门派(原九门派加曼陀门派)</span></h3><p><span>完成新手任务，前往门派拜师人加入门派，</span><strong><span>所有主要攻击技能都有所调整，攻击伤害增益，消耗怒气值，冷却等都做了相应的调整</span></strong></p><p><span>具体请移步游戏内进行体验，</span><strong><span>详细说明请查看技能描述</span></strong></p><p>&nbsp;</p><h3 id='10红包随意发去中心化的交易系统人人都是老板模式'><span>10、红包随意发，去中心化的交易系统，人人都是老板模式</span></h3><blockquote><p><strong><span>小提示：可以设置1000元宝，10个包，10秒，未抢完的或者未抢到的数值，会原路退回</span></strong></p><p><strong><span>更多红包玩法请稳步游戏进行体验，红包体验非常丝滑</span></strong></p></blockquote><figure><table><thead><tr><th><span>发放场景</span></th><th><span>红包类型</span></th></tr></thead><tbody><tr><td><span>个人（私发）</span></td><td><span>狩猎点，元宝 ，金币</span></td></tr><tr><td><span>组队模式（限时抢红包模式）</span></td><td><span>狩猎点，元宝 ，金币</span></td></tr><tr><td><span>场景模式（限时抢红包模式）</span></td><td><span>狩猎点，元宝 ，金币</span></td></tr><tr><td><span>世界模式（限时抢红包模式）</span></td><td><span>狩猎点，元宝 ，金币</span></td></tr><tr><td><span>国家模式（限时抢红包模式）</span></td><td><span>狩猎点，元宝 ，金币</span></td></tr></tbody></table></figure><p>&nbsp;</p><h3 id='11独特邮件系统'><span>11、独特邮件系统</span></h3><p><span>系统补偿会在人物头像下方【邮件】图标里面会有物品补发，任务完成时背包不足得不到奖励的补发等，后期会更新邮件发送物品功能等一系列有趣玩法 </span></p><h3 id='12全新副本活动所有怪物爆各种物品'><span>12、全新副本活动，所有怪物爆各种物品</span></h3><ul><li><span>本服活动全需要通过参加其他活动以及野外挂机获得【副本通用券】才能进入副本。</span></li><li><span>所有副本活动都进行了优化升级，完善丰富了各种爆率物品</span></li><li><span>详细请查看爆率细节</span></li></ul><h3 id='13全防官玩法人人可刷可以交易'><span>13、全防官玩法人人可刷可以交易</span></h3><ul><li><span>野外场景刷怪可以得装备1-9星，可交易</span></li><li><span>野外山洞可刷手工材料配合种地挖矿生产的材料可以制作高于棉布秘银概率的高星</span></li><li><span>种地挖矿制作手工的材料减负，不需要和官方完全一样的数量，具体进游戏体验</span></li><li><span>采药，种植，钓鱼等可以通过制药烹饪制作出珍品的药品和食物对于PK和日常开销都有非常大的作用</span></li><li><span>……待增加</span></li></ul><h3 id='14生活采药种地挖矿钓鱼可制作巨大量加成药品'><span>14、生活采药种地挖矿钓鱼可制作巨大量加成药品</span></h3><p><span>本服药品系统独创，玩家可根据自身喜好完成制药、烹饪的升级，这个系统将使生活玩家和药物的重要性凸显。</span></p><figure><table><thead><tr><th><span>类型</span></th><th><span>HP(血)</span></th><th><span>MP(蓝)</span></th><th><span>HP%(百分比血)</span></th><th><span>MP%(百分比气)</span></th><th><span>怒气</span></th><th><span>四属性</span></th><th><span>四抗性</span></th><th><span>免疫性</span></th><th><span>持续性</span></th></tr></thead><tbody><tr><td><span>食物</span></td><td><span>√</span></td><td><span>√</span></td><td><span>√</span></td><td><span>√</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>药品</span></td><td><span>√</span></td><td><span>√</span></td><td><span>√</span></td><td><span>√</span></td><td><span>√</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>特殊药品</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><span>√</span></td><td><span>√</span></td><td><span>√</span></td><td>&nbsp;</td></tr><tr><td><span>膏药</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><span>√</span></td></tr></tbody></table></figure><p><span>如上，药品为玩家在【技能&gt;生活技能】自行制作，或野外开宝箱等方式少量获得。</span></p><ul><li><span>1、药品分次品、良品、上品、精品、极品五个等级，每个等级药效差距非常大。</span></li><li><span>2、通过野外开宝箱等产出的药品等级普遍较低。</span></li><li><span>3、通过烹饪、制药产出的药品，品阶根据玩家相应生活技能的等级生成。</span></li><li><span>4、膏药使用后，可在战斗中持续回血</span></li></ul><h3 id='15武魂幻魂'><span>15、武魂，幻魂</span></h3><p><span>待完善</span></p><h3 id='16野外boss和世界boss'><span>16、野外BOSS和世界BOSS</span></h3><ul><li><p><span>玄武岛</span></p><ul><li><span>青蛙</span></li><li><span>护岛</span></li></ul></li><li><p><span>摩牙洞BOSS</span></p></li><li><p><span>古墓BOSS系列</span></p></li><li><p><span>宝藏洞BOSS系列</span></p></li><li><p><span>苍山金刚系列</span></p></li><li><p><span>草原小白系列</span></p></li><li><p><span>武夷冰妖系列</span></p></li><li><p><span>银铠雪原企鹅王</span></p></li><li><p><span>秦皇地宫1-3BOSS</span></p></li><li><p><span>帝后</span></p></li><li><p><span>详细移步爆率</span></p></li></ul><h3 id='17多宝阁玩法'><span>17、多宝阁玩法</span></h3><p><span>多宝阁为限时场景，每天最多在内 1 小时，产出大量元宝和各种道具，多宝阁新手当天在内累计时间不满 1 小时的情况下可无限次进入多宝阁，多宝阁共分 7 层，越高层爆率越高，后续再进入需使用特殊物品【赦令文书】，此物品在全世界怪物、宝箱、采药、挖矿、国家活动、副本皆可能掉落，</span></p><h3 id='18凤凰古城玩法'><span>18、凤凰古城玩法</span></h3><p><span>待完善</span></p><h3 id='19装备手工套装'><span>19、装备手工套装</span></h3><p><span>见上面介绍图</span></p><p>&nbsp;</p><h3 id='20雕纹系统'><span>20、雕纹系统</span></h3><p><span>待完善</span></p><h3 id='21修炼系统'><span>21、修炼系统</span></h3><p><span>待完善</span></p><h3 id='22多重玩法心法升级'><span>22、多重玩法心法升级</span></h3><p><span>本服是需要自行学习心法，升级</span></p><h3 id='23pk死亡原地满血满怒满气复活'><span>23、PK死亡原地满血满怒满气复活</span></h3><p><span>本服一大亮点，可以原地复活，只需要扣除部分元宝。</span></p><blockquote><p><strong><span>小提示：2分钟内，从20元宝 40元宝 80元宝。。。一直翻倍直到1280元宝，超过1280元宝会一直扣除1280不再增加。如果中间间断，则重新从20元宝开始计算，让你不在为反复出窍到地府而影响游戏体验</span></strong></p></blockquote><p>&nbsp;</p><p>&nbsp;</p><h2 id='副本活动掉落'><span>副本活动掉落</span></h2><figure><table><thead><tr><th><span>BOSS                                                                          </span></th><th><span>副本活动                                                         </span></th><th><span>掉落</span></th></tr></thead><tbody><tr><td><span>[慕容复]</span></td><td><span>挑战燕子坞</span></td><td><span>秘银碎片，新莽神符，染料丝线，套装，宝石雕琢符，珍兽蛋：英招，要决：落马箭，百变如意：慕容复，90级以上慕容复掉落寒冰星屑，80-89级慕容复掉落神兵符1级，90-99级慕容复掉落神兵符2级，100-119级慕容复掉落神兵符3级，200元宝票</span></td></tr><tr><td><span>[鸠摩智]</span></td><td><span>挑战燕子坞</span></td><td><span>精铁碎片，染料丝线，武器，宝石雕琢符，百变如意：鸠摩智，200元宝票</span></td></tr><tr><td><span>[段延庆]</span></td><td><span>挑战燕子坞</span></td><td><span>宝石雕琢符，棉布碎片，装备，百变如意：段延庆，200元宝票，</span></td></tr><tr><td><span>[叶二娘]</span></td><td><span>挑战燕子坞</span></td><td><span>，</span></td></tr><tr><td><span>[岳老三]</span></td><td><span>挑战燕子坞</span></td><td><span>，</span></td></tr><tr><td><span>[云中鹤]</span></td><td><span>挑战燕子坞</span></td><td><span>，</span></td></tr><tr><td><span>[蹴鞠十三妹孙美美]</span></td><td><span>横扫牡丹碗蹴鞠大赛</span></td><td><span>新莽神符，签名足球，一瓶金沙，200元宝票</span></td></tr><tr><td><span>[远古棋魂]</span></td><td><span>棋局</span></td><td><span>珍兽还童卷轴，药品，鉴定卷轴，1级宝石，60级以上远古棋魂掉落灵魂碎片，200元宝票</span></td></tr><tr><td><span>[黄金棋子]</span></td><td><span>棋局</span></td><td><span>珍兽还童卷轴，药品，鉴定卷轴，1级宝石，灵魂碎片，</span></td></tr><tr><td><span>[贼兵头目]</span></td><td><span>贼兵入侵</span></td><td><span>鉴定卷轴，1级宝石，低级宝石合成符，武器装备，掌柜要诀，珍兽幻化丹碎片，60级以上贼兵头目掉落灵魂碎片，60级以上贼兵头目掉落麟木箭，200元宝票</span></td></tr><tr><td><span>[恶霸]</span></td><td><span>偷袭门派</span></td><td><span>1级宝石，鉴定卷轴，武器装备，九大门派秘籍，九大门派要诀，灵兽精魄，60级以上恶霸掉落武魂扩展属性书，60级以上恶霸掉落灵魂碎片，200元宝票</span></td></tr><tr><td><span>[喽啰]</span></td><td><span>偷袭门派</span></td><td><span>药品，武器装备，药方配方，行囊格箱，1级宝石，九大门派秘籍，九大门派要诀，60级以上喽啰掉落武魂扩展属性书，60级以上喽啰掉落灵魂碎片</span></td></tr><tr><td><span>[宝藏主人]</span></td><td><span>墓穴宝藏副本</span></td><td><span>行囊格箱，药方图样，宝藏钥匙，武器装备</span></td></tr><tr><td><span>[镜湖水匪头领]</span></td><td><span>镜湖</span></td><td><span>珍兽还童卷轴，鉴定卷轴，1级宝石，新莽神符</span></td></tr><tr><td><span>[大山鬼]</span></td><td><span>保护帮派驻地</span></td><td><span>行囊格箱，食谱图样，武器装备，棉布碎片</span></td></tr><tr><td><span>[山神]</span></td><td><span>保护帮派驻地</span></td><td><span>行囊箱格，天罡强化精华，门派套装，浴火石，珍兽蛋，</span></td></tr><tr><td><span>[蒙面恶僧]</span></td><td><span>藏经阁</span></td><td><span>要诀：慈航普度，要诀：怒火连斩，要诀：横扫乾坤，要诀：七星聚首，要诀：春花秋月，要诀：一日丧命散，要诀：中冲剑，要诀：冰凝霜华，要诀：步步生花，贝叶经残片，百淬神玉，雕纹图样，丹青，60级以上蒙面恶僧掉落灵魂碎片，60级以上蒙面恶僧掉落武魂延寿丹</span></td></tr><tr><td><span>[鬼剑]</span></td><td><span>燕王古墓一层</span></td><td><span>行囊格箱，药方图样，武器装备，发型图，珍兽还童卷轴，打孔材料，1级宝石，时装图样，燕弦玉，新莽神符，200元宝</span></td></tr><tr><td><span>[岩魔]</span></td><td><span>燕王古墓二层</span></td><td><span>行囊格箱，药方图样，武器装备，发型图，珍兽还童卷轴，打孔材料，1级宝石，时装图样，燕弦玉，新莽神符，200元宝</span></td></tr><tr><td><span>[毒丝蜘蛛王]</span></td><td><span>燕王古墓三层</span></td><td><span>行囊格箱，药方图样，仙丹彩溪，武器装备，流思发型图，珍兽还童卷轴，打孔材料，1级宝石，时装图样，新莽神符，燕弦玉，200元宝</span></td></tr><tr><td><span>[缠丝蜘蛛王]</span></td><td><span>燕王古墓三层</span></td><td><span>燕侯套装武器，武器装备，仙丹彩溪，药品药方，食物配方，图样，行囊格箱，燕弦玉，时装图样，200元宝，</span></td></tr><tr><td><span>[春三十娘]</span></td><td><span>燕王古墓四层</span></td><td><span>行囊格箱，药方图样，武器装备，景瑶发型图，珍兽还童卷轴，打孔材料，1级宝石，时装图样，新莽神符，燕弦玉，200元宝</span></td></tr><tr><td><span>[伏地魔]</span></td><td><span>燕王古墓五层</span></td><td><span>行囊格箱，药方图样，武器装备，叠羽发型图，珍兽还童卷轴，打孔材料，1级宝石，时装图样，新莽神符，燕弦玉，200元宝</span></td></tr><tr><td><span>[白帝的阴影]</span></td><td><span>燕王古墓六层</span></td><td><span>行囊格箱，药方图样，武器装备，叠羽发型图，珍兽还童卷轴，打孔材料，1级宝石，时装图样，新莽神符，燕弦玉，200元宝</span></td></tr><tr><td><span>[白帝]</span></td><td><span>燕王古墓六层</span></td><td><span>皓灵套装武器，武器装备，药品药方，食物配方，图样，行囊格箱，燕弦玉，时装图样，200元宝</span></td></tr><tr><td><span>[冥将]</span></td><td><span>燕王古墓七层</span></td><td><span>行囊格箱，药方图样，武器装备，寰海发型图，珍兽还童卷轴，打孔材料，1级宝石，时装图样，新莽神符，燕弦玉，200元宝</span></td></tr><tr><td><span>[血饮狂刀]</span></td><td><span>燕王古墓八层</span></td><td><span>行囊格箱，药方图样，武器装备，鬓华发型图，珍兽还童卷轴，打孔材料，1级宝石，时装图样，新莽神符，燕弦玉，门派套装，200元宝</span></td></tr><tr><td><span>[赤霄]</span></td><td><span>燕王古墓九层</span></td><td><span>行囊格箱，药方图样，打孔材料，1级宝石，时装图样，新莽神符，燕弦玉，打造图，门派套装，200元宝，</span></td></tr><tr><td><span>[赤霄火魂]</span></td><td><span>燕王古墓九层</span></td><td><span>赤炼套装武器，武器装备图样，燕弦玉，时装图样</span></td></tr><tr><td><span>[护岛神兽]</span></td><td><span>玄武岛</span></td><td><span>行囊格箱，药方配方，武器装备，图样，200元宝，</span></td></tr><tr><td><span>[无敌飞天猫]</span></td><td><span>玄武岛</span></td><td><span>行囊格箱，武器装备，套装，图样，药方食谱，珍兽群攻技能书（如：血爆技能书、冰爆技能书、五雷轰顶技能书等），珍兽高级群攻技能书（如：高级血爆技能书、高级冰爆技能书），夫妻传送技能书：形影不离G（当无敌飞天猫被击杀后，会在玄武岛引来5个宝书窃贼：噬心鬼豹和利爪邪鹰。），200元宝</span></td></tr><tr><td><span>[莽牯毒蛤王]</span></td><td><span>玄武岛</span></td><td><span>要诀：仙风道骨，要诀：商阳剑，低级宝石镶嵌符，低级刻铭符，秘银碎片，棉布碎片，精铁碎片，地煞强化精华，天罡强化精华，低级宝石合成符，极率之珠，新莽神符（非绑定），1000元宝</span></td></tr><tr><td><span>[莽牯毒蛤]</span></td><td><span>玄武岛</span></td><td><span>要诀：仙风道骨，要诀：商阳剑，低级宝石镶嵌符，低级刻铭符，秘银碎片，棉布碎片，精铁碎片，地煞强化精华，天罡强化精华，低级宝石合成符，极率之珠，新莽神符（非绑定），1000元宝</span></td></tr><tr><td><span>[莽牯朱蛤王]</span></td><td><span>玄武岛</span></td><td><span>低级宝石镶嵌符，低级刻铭符，秘银碎片，棉布碎片，精铁碎片，地煞强化精华，天罡强化精华，低级宝石合成符，极率之珠，1000元宝，</span></td></tr><tr><td><span>[噬心鬼豹]</span></td><td><span>玄武岛</span></td><td><span>行囊格箱，武器装备，珍兽技能书，时装制作图样，1级宝石，</span></td></tr><tr><td><span>[利爪邪鹰]</span></td><td><span>玄武岛</span></td><td><span>行囊格箱，武器装备，珍兽技能书，时装制作图样，1级宝石，</span></td></tr><tr><td><span>[玄击金刚]</span></td><td><span>苍山</span></td><td><span>要诀：清心普善咒，要诀：定海神针，低级宝石镶嵌符，低级刻铭符，秘银碎片，棉布碎片，精铁碎片，地煞强化精华，天罡强化精华，低级宝石合成符，极率之珠，1000元宝</span></td></tr><tr><td><span>[玄击神将]</span></td><td><span>苍山</span></td><td><span>要诀：清心普善咒，要诀：定海神针，低级宝石镶嵌符，低级刻铭符，秘银碎片，棉布碎片，精铁碎片，地煞强化精华，天罡强化精华，低级宝石合成符，极率之珠，1000元宝</span></td></tr><tr><td><span>[千年冰魄]</span></td><td><span>武夷</span></td><td><span>要诀：调虎离山，要诀：含笑半步癫，要诀：天地明灭，低级宝石镶嵌符，低级刻铭符，秘银碎片，棉布碎片，精铁碎片，地煞强化精华，天罡强化精华，低级宝石合成符，极率之珠，1000元宝</span></td></tr><tr><td><span>[冰妖]</span></td><td><span>武夷</span></td><td><span>要诀：调虎离山，要诀：含笑半步癫，要诀：天地明灭，低级宝石镶嵌符，低级刻铭符，秘银碎片，棉布碎片，精铁碎片，地煞强化精华，天罡强化精华，低级宝石合成符，极率之珠，1000元宝</span></td></tr><tr><td><span>[白冥启]</span></td><td><span>草原</span></td><td><span>要诀：棒打狗头，要诀：烽火连城，低级宝石镶嵌符，低级刻铭符，秘银碎片，棉布碎片，精铁碎片，地煞强化精华，天罡强化精华，低级宝石合成符，极率之珠，新莽神符（非绑定），1000元宝</span></td></tr><tr><td><span>[冥虚奴]</span></td><td><span>草原</span></td><td><span>要诀：棒打狗头，要诀：烽火连城，低级宝石镶嵌符，低级刻铭符，秘银碎片，棉布碎片，精铁碎片，地煞强化精华，天罡强化精华，低级宝石合成符，极率之珠，新莽神符（非绑定），1000元宝</span></td></tr><tr><td><span>[混江小龙]</span></td><td><span>镜湖</span></td><td><span>1级宝石，装备武器，低级宝石合成符，极率之珠，地煞强化精华，精铁碎片，棉布碎片，秘银碎片，低级宝石镶嵌符，低级刻铭符，天罡强化精华，新莽神符，200元宝</span></td></tr><tr><td><span>[混江龙]</span></td><td><span>镜湖</span></td><td><span>1级宝石，装备武器，低级宝石合成符，极率之珠，地煞强化精华，精铁碎片，棉布碎片，秘银碎片，低级宝石镶嵌符，低级刻铭符，天罡强化精华，新莽神符，200元宝</span></td></tr><tr><td><span>[出洞小蛟]</span></td><td><span>镜湖</span></td><td><span>行囊格箱，药方配方，武器装备，图样，坐骑，1级宝石，打孔材料，</span></td></tr><tr><td><span>[出洞蛟]</span></td><td><span>镜湖</span></td><td><span>行囊格箱，药方配方，武器装备，图样，坐骑，1级宝石，打孔材料，</span></td></tr><tr><td><span>[翻江小蜃]</span></td><td><span>镜湖</span></td><td><span>行囊格箱，药方配方，武器装备，图样，坐骑，1级宝石，打孔材料，</span></td></tr><tr><td><span>[翻江蜃]</span></td><td><span>镜湖</span></td><td><span>行囊格箱，药方配方，武器装备，图样，坐骑，1级宝石，打孔材料，</span></td></tr><tr><td><span>[龙龟]</span></td><td><span>圣兽山</span></td><td><span>珍兽蛋：龙龟，鉴定卷轴，5000元宝</span></td></tr><tr><td><span>[野猪头目]</span></td><td><span>圣兽山</span></td><td><span>野猪王的踪迹，200元宝</span></td></tr><tr><td><span>[尖牙野猪王]</span></td><td><span>圣兽山</span></td><td><span>鉴定卷轴，低级宝石合成符，武器装备，珍兽高级技能书，高级珍兽还童天书，珍兽普通技能书，200元宝，</span></td></tr><tr><td><span>[狂暴龙]</span></td><td><span>圣兽山</span></td><td><span>鉴定卷轴，低级宝石合成符，武器装备，珍兽高级技能书，高级珍兽还童天书，珍兽普通技能书，暴龙宝宝，200元宝</span></td></tr><tr><td><span>[宝箱童子]</span></td><td><span>圣兽山</span></td><td><span>珍兽技能书，</span></td></tr><tr><td><span>[闪电狗]</span></td><td><span>圣兽山</span></td><td><span>行囊格箱，武器装备，套装，图样，药方食谱，珍兽群攻技能书，珍兽高级群攻技能书，夫妻传送技能书：形影不离G（当闪电狗被击杀后，会在圣兽山引来10个宝书窃贼：吸血蝙蝠和啮魂蜥蜴。），</span></td></tr><tr><td><span>[吸血蝙蝠]</span></td><td><span>圣兽山</span></td><td><span>行囊格箱，武器装备，珍兽技能书，时装制作图样，1级宝石，</span></td></tr><tr><td><span>[啮魂蜥蜴]</span></td><td><span>圣兽山</span></td><td><span>行囊格箱，武器装备，珍兽技能书，时装制作图样，1级宝石，</span></td></tr><tr><td><span>[余毒]</span></td><td><span>连环副本</span></td><td><span>药品，烹饪，行囊格箱，配方食谱，门派套装，除害令牌，60级以上余毒掉落武魂：御瑶盘，60级以上余毒掉落武魂：琉璃焰，200元宝</span></td></tr><tr><td><span>[红熊王]</span></td><td><span>连环副本</span></td><td><span>材料，药品，烹饪，行囊格箱，配方食谱，武器装备，花剑雨的信（剿匪道具），60级以上红熊王掉落武魂：御瑶盘，60级以上红熊王掉落武魂：琉璃焰，200元宝，</span></td></tr><tr><td><span>[葛荣]</span></td><td><span>连环副本</span></td><td><span>药品，烹饪，行囊格箱，配方食谱，武器装备，新莽神符，金蚕丝，60级以上葛荣掉落武魂：御瑶盘，60级以上葛荣掉落武魂：琉璃焰，200元宝，</span></td></tr><tr><td><span>[愤怒的葛荣]</span></td><td><span>连环副本</span></td><td><span>药品，烹饪，行囊格箱，配方食谱，武器装备，金蚕丝，100%掉落新莽神符，60级以上愤怒的葛荣掉落武魂：御瑶盘，60级以上愤怒的葛荣掉落武魂：琉璃焰</span></td></tr><tr><td><span>[孙立者]</span></td><td><span>丐帮门派副本</span></td><td><span>门派召集令，药品，烹饪，行囊格箱，配方食谱，武器装备，珍兽技能书，染发剂，虹耀石，新莽神符1级，200元宝</span></td></tr><tr><td><span>[袁公子]</span></td><td><span>峨嵋门派副本</span></td><td><span>门派召集令，药品，烹饪，行囊格箱，配方食谱，武器装备，珍兽技能书，染发剂，虹耀石，新莽神符1级，200元宝</span></td></tr><tr><td><span>[金裳]</span></td><td><span>明教门派副本</span></td><td><span>门派召集令，药品，烹饪，行囊格箱，配方食谱，武器装备，珍兽技能书，染发剂，虹耀石，新莽神符1级，200元宝</span></td></tr><tr><td><span>[彭侯]</span></td><td><span>少林门派副本</span></td><td><span>门派召集令，药品，烹饪，行囊格箱，配方食谱，武器装备，珍兽技能书，染发剂，虹耀石，新莽神符2级，200元宝</span></td></tr><tr><td><span>[秋三十娘]</span></td><td><span>星宿门派副本</span></td><td><span>门派召集令，药品，烹饪，行囊格箱，配方食谱，武器装备，珍兽技能书，染发剂，虹耀石，新莽神符3级，200元宝</span></td></tr><tr><td><span>[白岑]</span></td><td><span>天山门派副本</span></td><td><span>门派召集令，药品，烹饪，行囊格箱，配方食谱，武器装备，珍兽技能书，染发剂，虹耀石，新莽神符4级，200元宝</span></td></tr><tr><td><span>[孟昧]</span></td><td><span>武当门派副本</span></td><td><span>门派召集令，药品，烹饪，行囊格箱，配方食谱，武器装备，珍兽技能书，染发剂，虹耀石，新莽神符5级，200元宝</span></td></tr><tr><td><span>[贾川]</span></td><td><span>逍遥门派副本</span></td><td><span>门派召集令，药品，烹饪，行囊格箱，配方食谱，武器装备，珍兽技能书，染发剂，虹耀石，新莽神符6级，200元宝</span></td></tr><tr><td><span>[王君]</span></td><td><span>天龙门派副本</span></td><td><span>门派召集令，药品，烹饪，行囊格箱，配方食谱，武器装备，珍兽技能书，染发剂，虹耀石，新莽神符7级，200元宝</span></td></tr><tr><td><span>[大笨熊]</span></td><td><span>寒玉谷副本</span></td><td><span>百变如意：大笨熊，</span></td></tr><tr><td><span>[飘飘鸭]</span></td><td><span>寒玉谷副本</span></td><td><span>百变如意：飘飘鸭，</span></td></tr><tr><td><span>[小兔兔]</span></td><td><span>寒玉谷副本</span></td><td><span>百变如意：小兔兔，</span></td></tr><tr><td><span>[哈大霸]</span></td><td><span>缥缈峰</span></td><td><span>秘银碎片，3级宝石雕琢符，10级鉴定卷轴，玄天寒玉，毒抗套装，忘无石，润魂石（1级），200元宝</span></td></tr><tr><td><span>[桑土公]</span></td><td><span>缥缈峰</span></td><td><span>秘银碎片，3级宝石雕琢符，10级鉴定卷轴，玄天寒玉，毒抗套装，忘无石，润魂石（1级），200元宝</span></td></tr><tr><td><span>[乌老大]</span></td><td><span>缥缈峰</span></td><td><span>精铁碎片，低级宝石镶嵌符，10级鉴定卷轴，玄天寒玉，忘无石，润魂石（1级），200元宝，</span></td></tr><tr><td><span>[卓不凡]</span></td><td><span>缥缈峰</span></td><td><span>，</span></td></tr><tr><td><span>[不平道人]</span></td><td><span>缥缈峰</span></td><td><span>，</span></td></tr><tr><td><span>[任平生]</span></td><td><span>缥缈峰</span></td><td><span>精铁碎片，低级宝石镶嵌符，10级鉴定卷轴，玄天寒玉，忘无石，润魂石（1级），200元宝，</span></td></tr><tr><td><span>[李秋水]</span></td><td><span>缥缈峰</span></td><td><span>棉布碎片，低级宝石合成符，10级鉴定卷轴，玄天寒玉，102级神器的神节，忘无石，千淬神玉，80级门派坐骑，润魂石（1级），200元宝，</span></td></tr><tr><td><span>[哈大霸]</span></td><td><span>初战缥缈峰</span></td><td><span>秘银碎片，3级宝石雕琢符，10级鉴定卷轴，玄天寒玉，毒抗套装，忘无石，润魂石（1级），200元宝</span></td></tr><tr><td><span>[桑土公]</span></td><td><span>初战缥缈峰</span></td><td><span>秘银碎片，3级宝石雕琢符，10级鉴定卷轴，玄天寒玉，毒抗套装，忘无石，润魂石（1级），200元宝</span></td></tr><tr><td><span>[乌老大]</span></td><td><span>初战缥缈峰</span></td><td><span>精铁碎片，低级宝石镶嵌符，10级鉴定卷轴，玄天寒玉，忘无石，润魂石（1级），200元宝，</span></td></tr><tr><td><span>[卓不凡]</span></td><td><span>初战缥缈峰</span></td><td><span>，</span></td></tr><tr><td><span>[不平道人]</span></td><td><span>初战缥缈峰</span></td><td><span>，</span></td></tr><tr><td><span>[任平生]</span></td><td><span>初战缥缈峰</span></td><td><span>精铁碎片，低级宝石镶嵌符，10级鉴定卷轴，玄天寒玉，忘无石，润魂石（1级）</span></td></tr><tr><td><span>[李秋水]</span></td><td><span>初战缥缈峰</span></td><td><span>棉布碎片，低级宝石合成符，10级鉴定卷轴，玄天寒玉，102级神器的神节，忘无石，千淬神玉，润魂石（1级）</span></td></tr><tr><td><span>[霜影]</span></td><td><span>束河古镇</span></td><td><span>宝石，武器装备，40级、50级门派套装，重楼之泪，重楼之芒，200元宝</span></td></tr><tr><td><span>[幽禁守卫]</span></td><td><span>秦皇地宫</span></td><td><span>行囊格箱，药方图样，武器装备，发型图，打孔材料，200元宝</span></td></tr><tr><td><span>[幽灵祭祀]</span></td><td><span>秦皇地宫</span></td><td><span>行囊格箱，药方图样，武器装备，发型图，打孔材料，200元宝</span></td></tr><tr><td><span>[秦皇之魄]</span></td><td><span>秦皇地宫</span></td><td><span>行囊格箱，药方图样，武器装备，发型图，打孔材料，200元宝</span></td></tr><tr><td><span>[护岛神兽]</span></td><td><span>天降奇兽副本</span></td><td><span>珍兽蛋：雷麟，珍兽蛋：雏凤，珍兽技能书，药品，灵兽丹·咒，灵兽丹·震，灵兽丹·虚，灵兽丹·风，珍兽幻化丹碎片，200元宝，</span></td></tr><tr><td><span>[无敌飞天猫]</span></td><td><span>天降奇兽副本</span></td><td><span>珍兽蛋：雷麟，珍兽蛋：雏凤，珍兽技能书，药品，灵兽丹·咒，灵兽丹·震，灵兽丹·虚，灵兽丹·风，珍兽幻化丹碎片，200元宝，</span></td></tr><tr><td><span>[小猪猪]</span></td><td><span>天降奇兽副本</span></td><td><span>珍兽蛋：雷麟，珍兽蛋：雏凤</span></td></tr><tr><td><span>[小狗狗]</span></td><td><span>天降奇兽副本</span></td><td><span>珍兽蛋：雷麟，珍兽蛋：雏凤</span></td></tr><tr><td><span>[小鹰鹰]</span></td><td><span>天降奇兽副本</span></td><td><span>珍兽蛋：雷麟，珍兽蛋：雏凤</span></td></tr><tr><td><span>[小虎虎]</span></td><td><span>天降奇兽副本</span></td><td><span>珍兽蛋：雷麟，珍兽蛋：雏凤</span></td></tr><tr><td><span>[镇宝龙王]</span></td><td><span>楼兰寻宝副本</span></td><td><span>秘银矿石，珍兽还童卷轴，药品，鉴定卷轴，怪物相册，奇物，神亦石，灵魂碎片，200元宝</span></td></tr><tr><td><span>[王阎]</span></td><td><span>楼兰连环副本</span></td><td><span>药品，烹饪，行囊格箱，配方食谱，玄昊玉，黄金之链（任务道具），忆魂石，200元宝</span></td></tr><tr><td><span>[洪棘妖王]</span></td><td><span>楼兰连环副本</span></td><td><span>药品，烹饪，行囊格箱，配方食谱，玄昊玉，玄佛珠（任务道具），忆魂石，200元宝</span></td></tr><tr><td><span>[火焰妖魔]</span></td><td><span>楼兰连环副本</span></td><td><span>药品，烹饪，行囊格箱，配方食谱，玄昊玉，全真行功要诀，新莽神符，忆魂石，回天神石，金蚕丝，200元宝</span></td></tr><tr><td><span>[搬山道人]</span></td><td><span>凤凰陵墓</span></td><td><span>鉴定卷轴，1级宝石，低级宝石合成符，武器装备，灵魂碎片，麟木箭，60级以上搬山道人掉落武魂：御瑶盘，60级以上搬山道人掉落武魂：琉璃焰，80级门派坐骑，80-89级搬山道人掉落神兵符1级，90-99级搬山道人掉落神兵符2级，100-119级搬山道人掉落神兵符3级</span></td></tr><tr><td><span>[天魁星宋姜]</span></td><td><span>杀星</span></td><td><span>奇物，75级珍兽装备，魂冰珠（1级），雕纹蚀刻溶剂，熔金粉，200元宝</span></td></tr><tr><td><span>[天罡星卢君逸]</span></td><td><span>杀星</span></td><td><span>奇物，75级珍兽装备，魂冰珠（1级），雕纹蚀刻溶剂，熔金粉，200元宝</span></td></tr><tr><td><span>[天机星吴永]</span></td><td><span>杀星</span></td><td><span>奇物，75级珍兽装备，魂冰珠（1级），雕纹蚀刻溶剂，熔金粉，200元宝</span></td></tr><tr><td><span>[天杀星李魁]</span></td><td><span>杀星</span></td><td><span>奇物，75级珍兽装备，魂冰珠（1级），雕纹蚀刻溶剂，熔金粉，200元宝</span></td></tr><tr><td><span>[天闲星公孙圣]</span></td><td><span>杀星</span></td><td><span>奇物，75级珍兽装备，魂冰珠（1级），雕纹蚀刻溶剂，熔金粉，200元宝</span></td></tr><tr><td><span>[天勇星关盛]</span></td><td><span>杀星</span></td><td><span>奇物，75级珍兽装备，魂冰珠（1级），雕纹蚀刻溶剂，熔金粉，200元宝</span></td></tr><tr><td><span>[天雄星林充]</span></td><td><span>杀星</span></td><td><span>奇物，75级珍兽装备，魂冰珠（1级），雕纹蚀刻溶剂，熔金粉，200元宝</span></td></tr><tr><td><span>[天猛星秦冥]</span></td><td><span>杀星</span></td><td><span>奇物，75级珍兽装备，魂冰珠（1级），雕纹蚀刻溶剂，熔金粉，200元宝</span></td></tr><tr><td><span>[天英星花容]</span></td><td><span>杀星</span></td><td><span>奇物，75级珍兽装备，魂冰珠（1级），雕纹蚀刻溶剂，熔金粉，200元宝</span></td></tr><tr><td><span>[天伤星武颂]</span></td><td><span>杀星</span></td><td><span>奇物，75级珍兽装备，魂冰珠（1级），雕纹蚀刻溶剂，熔金粉，200元宝</span></td></tr><tr><td><span>[天孤星鲁志生]</span></td><td><span>杀星</span></td><td><span>奇物，75级珍兽装备，魂冰珠（1级），雕纹蚀刻溶剂，熔金粉，200元宝</span></td></tr><tr><td><span>[天威星呼延啄]</span></td><td><span>杀星</span></td><td><span>奇物，75级珍兽装备，魂冰珠（1级），雕纹蚀刻溶剂，熔金粉，200元宝</span></td></tr><tr><td><span>[工魂影像]</span></td><td><span>摩崖洞</span></td><td><span>宝石，40-50级门派套装，200元宝</span></td></tr><tr><td><span>[企鹅王]</span></td><td><span>银皑雪原</span></td><td><span>行囊格箱，门派套装，蒲扇，宫扇，鉴定卷轴，万灵石，雪落无痕，新莽神符，1000元宝</span></td></tr><tr><td><span>[木桶伯]</span></td><td><span>宝藏洞</span></td><td><span>药品，武器装备，行囊格箱，打孔工具，地煞强化精华，天龙财富卡，新莽神符1级，200元宝</span></td></tr><tr><td><span>[护宝神兽]</span></td><td><span>宝藏洞</span></td><td><span>药品，行囊格箱，武器装备，打孔材料，200元宝，</span></td></tr><tr><td><span>[夺宝马贼]</span></td><td><span>挖宝随机放出</span></td><td><span>行囊格箱，武器装备，珍兽技能书，时装制作图样，1级宝石，10元宝</span></td></tr></tbody></table></figure><p>&nbsp;</p><p>&nbsp;</p><h2 id='精细爆率'><span>精细爆率</span></h2><figure><table><thead><tr><th><span>怪物名称或类型</span></th><th><span>爆率</span></th><th><span>掉落</span></th></tr></thead><tbody><tr><td><span>帝后</span></td><td><span>100%</span></td><td><span>最后打死帝后的那个人，所属的国家，全国家所有人发红包，狩猎券500点，100个包</span></td></tr><tr><td><span>世界BOSS 上古BOSS，远古BOSS</span></td><td><span>50%</span></td><td><span>1000点元宝票,2000点绑定元宝,3000点绑定元宝,3级精铁,3级秘银,3级棉布,白虎魂玉,白驹魂玉,残缺的兽骨,苍狼魂玉,赤熊魂玉,初级副本券,低级珍兽渡劫天书,飞羚魂玉,高级副本券,高级珍兽渡劫天书,和平徽章,幻蝶魂玉,金乌魂玉,锦鳞魂玉,九尾魂玉,灵蝉魂玉,灵兽精魄,鹿蜀魂玉,青龙魂玉,饰品身法雕纹3级,狩猎券·烫金,霜鹤魂玉,通用副本券,许愿果,玄武魂玉,御龙帖·1天,珍兽幻化丹碎片,中级副本券,中级珍兽渡劫天书,重楼戒,重楼链,重楼玉,朱雀魂玉</span></td></tr><tr><td>&nbsp;</td><td><span>40%</span></td><td><span>2000点元宝票,4000点绑定元宝,4级精铁,4级秘银,4级棉布,5000点绑定元宝</span></td></tr><tr><td>&nbsp;</td><td><span>35%</span></td><td><span>7级神节碎片</span></td></tr><tr><td>&nbsp;</td><td><span>30%</span></td><td><span>5000点元宝票,6000点绑定元宝,超级珍兽渡劫天书</span></td></tr><tr><td>&nbsp;</td><td><span>20%</span></td><td><span>10000点元宝票，高级净化</span></td></tr><tr><td>&nbsp;</td><td><span>10%</span></td><td><span>20000点元宝票，御龙帖·30天</span></td></tr><tr><td>&nbsp;</td><td><span>8%</span></td><td><span>20000点元宝票,暴·暗火属性书,暴·拔毒属性书,暴·冲玄属性书,暴·穿冰属性书</span></td></tr><tr><td>&nbsp;</td><td><span>5%</span></td><td><span>狩猎券·月尘,兽灵碎片</span></td></tr><tr><td>&nbsp;</td><td><span>2.5%</span></td><td><span>狩猎券·游龙</span></td></tr><tr><td>&nbsp;</td><td><span>2%</span></td><td><span>50000点元宝票</span></td></tr><tr><td>&nbsp;</td><td><span>0.5%</span></td><td><span>狩猎券·至尊</span></td></tr></tbody></table></figure><p><span>更多详细爆率请移步：</span></p><p>&nbsp;</p></div></div>
+
+<script>(function(){var t=document.body.parentElement,e=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(t,e,n){document.addEventListener(t,function(t){if(!t.defaultPrevented)for(var i=t.target;i&&i!=this;i=i.parentNode)if(i.matches(e)){!1===n.call(i,t)&&(t.preventDefault(),t.stopPropagation());break}},!1)};function o(){return t.scrollTop}r("click",".outline-expander",function(t){var e=this.closest(".outline-item-wrapper").classList;return e.contains("outline-item-open")?e.remove("outline-item-open"):e.add("outline-item-open"),c(),!1}),r("click",".outline-item",function(t){var e=this.querySelector(".outline-label");if(location.hash="#"+e.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),l(),n.add("outline-item-active")}});var a,s,u=function(){var t=o();n=null;for(var i=0;i<e.length&&e[i][1]-t<60;i++)n=e[i]},l=function(){document.querySelectorAll(".outline-item-active").forEach(t=>t.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(t=>t.classList.remove("outline-item-open"))},c=function(){if(n){l();var t=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(t)if(i){var e=t.closest(".outline-item-open>ul>.outline-item-wrapper");if(e)e.classList.add("outline-item-active");else{for(var r=(t=t.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(t=r).parentElement.closest(".outline-item-wrapper");t.classList.add("outline-item-active")}}else t.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(t){a&&clearTimeout(a),a=setTimeout(function(){u(),c()},300)});var f=function(){s=setTimeout(function(){!function(){e=[];var t=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");e.push([i,t+n.getBoundingClientRect().y])})}(),u(),c()},300)};window.addEventListener("resize",function(t){s&&clearTimeout(s),f()}),f()})();</script></body>
+</html>

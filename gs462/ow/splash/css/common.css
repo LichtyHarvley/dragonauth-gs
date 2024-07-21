@@ -1,0 +1,15 @@
+﻿/*游戏官网、畅游官网、平台主要页面通用样式*/
+/*平台部分页面：通过http://www.changyou.com/member/css/reset.css 导入本样式实现引入页面。*/
+/*重大事件统一置灰网站页面样式*/
+/*html {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+    background-color: #ccc
+}
+*body *{
+    filter: gray;
+}*/

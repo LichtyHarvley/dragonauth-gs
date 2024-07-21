@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>launcher</title>
+  <link type="text/css" rel="stylesheet" href="css/reset.css" />
+  <style>
+    html,
+    body {
+      overflow: hidden;
+    }
+
+    .container {
+      width: 605px;
+      height: 262px;
+      overflow: hidden;
+      background-color: #260907;
+    }
+
+    .slider {
+      width: 393px;
+      height: 262px;
+      float: left;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .banner {
+      height: 262px;
+    }
+
+    .slider li {
+      display: block;
+      position: absolute;
+    }
+
+    .slider li img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .triggers {
+      position: absolute;
+      bottom: 5px;
+      right: 10px;
+      z-index: 33;
+    }
+
+    .triggers span {
+      display: block;
+      width: 22px;
+      height: 22px;
+      background: url(images/slide_num.png) no-repeat;
+      cursor: pointer;
+      float: left;
+      text-indent: -1987em;
+      overflow: hidden;
+    }
+
+    .triggers span.current {
+      background-position: 0 bottom;
+    }
+
+    .news {
+      width: 200px;
+      height: 100%;
+      float: left;
+      overflow: hidden;
+      background: url(images/line.png) left no-repeat;
+      padding: 0 6px;
+    }
+
+    .news p {
+      width: 100%;
+      height: 37px;
+      border-bottom: 1px solid #8f6a6a;
+      color: #8f6a6a;
+      font-size: 16px;
+      font-weight: bolder;
+      line-height: 37px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .news p span {
+      display: block;
+      width: 13px;
+      height: 21px;
+      background: url(images/arrow.png) no-repeat;
+      background-position: 0 0;
+      position: absolute;
+      top: 50%;
+      right: 28px;
+      margin-top: -11px;
+    }
+
+    .news p.cur span {
+      width: 21px;
+      height: 13px;
+      background-position: 0 -21px;
+      right: 26px;
+      margin-top: -6px;
+    }
+
+    .news ul {
+      padding: 0 12px 0 18px;
+      height: 148px;
+      display: none;
+      overflow: hidden;
+    }
+
+    .news li {
+      position: relative;
+      margin: 8px 0;
+    }
+
+    .news li span {
+      display: block;
+      width: 5px;
+      height: 5px;
+      background-color: #ab9e98;
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      margin-top: -3.5px;
+    }
+
+    .news li a {
+      display: inline-block;
+      width: 100%;
+      font-size: 12px;
+      color: #ab9e98;
+      text-decoration: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .news li a:hover {
+      color: #fff;
+    }
+
+    .news ul.cur {
+      display: block;
+    }
+  </style>
+  <link type="text/css" rel="stylesheet" href="css/common.css" />
+</head>
+
+<body onselectstart="return false" scroll="no" oncontextmenu="return false" ondragstart="return false">
+  <div class="container">
+    <div class="slider">
+      <div class="banner">
+        <ul class>
+          <li>
+            <a href="https://www.123pan.com/s/DANITd-3jZCA.html" target="_black">
+              <img src="picture/1720088399025.jpg" alt="凤凰古城" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.123pan.com/s/DANITd-3jZCA.html" target="_black">
+              <img src="picture/1718262326281.jpg" alt="怀旧新服" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.123pan.com/s/DANITd-3jZCA.html" target="_black">
+              <img src="picture/1718706175877.jpg" alt="Q2版本专题页" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.123pan.com/s/DANITd-3jZCA.html" target="_black">
+              <img src="picture/1715069812653.jpg" alt="周年专题页" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="news">
+      <p class="cur">游戏下载<span></span></p>
+      <ul class="cur">
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="《云上三城-怀旧•新天龙八部》7月15日全服更新" target="_blank" class="impnews">《云上三城-怀旧•新天龙八部》7月15日全服更新</a>
+        </li>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="《云上三城-怀旧•新天龙八部》7月01日正式上线" target="_blank" style="font-weight: bold" class="impnews">《云上三城-怀旧•新天龙八部》7月01日正式上线</a>
+        </li>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="6月21日怀旧四区新服开启公告" target="_blank" class="impnews">不限速下载完整客户端</a>
+        </li>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="《经典怀旧•新天龙八部》6月21日全服更新维护公告" target="_blank" class="impnews">生活散人打金也可以称王</a>
+        </li>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="防范诈骗行为提醒公告" target="_blank" style="font-weight: bold" class="impnews">市面独创国家玩法激情PK国战</a>
+        </li>
+      </ul>
+      <p>新闻<span></span></p>
+      <ul>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="不是哥们，参加新凤凰能拿这么多奖励？"
+            target="_blank">不是哥们，参加新凤凰能拿这么多奖励？</a>
+        </li>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="不止场景重制，百人同场PK，让团战体验再升级！"
+            target="_blank">不止场景重制，百人同场PK，让团战体验再升级！</a>
+        </li>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="定了，下周四！跨服凤凰它来了！"
+            target="_blank">定了，下周四！跨服凤凰它来了！</a>
+        </li>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="看完八妹这篇文章，明天轻松玩转全新江湖！"
+            target="_blank">看完八妹这篇文章，明天轻松玩转全新江湖！</a>
+        </li>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="倒计时2天！快来看看更新后可以拿哪些奖励！"
+            target="_blank">倒计时2天！快来看看更新后可以拿哪些奖励！</a>
+        </li>
+      </ul>
+      <p>公告<span></span></p>
+      <ul>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="《经典怀旧•新天龙八部》7月4日全服更新维护公告"
+            target="_blank" class="impnews">《经典怀旧•新天龙八部》7月4日全服更新维护公告</a>
+        </li>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="《经典怀旧•新天龙八部》6月27日全服更新维护公告"
+            target="_blank" style="font-weight: bold" class="impnews">《经典怀旧•新天龙八部》6月27日全服更新维护公告</a>
+        </li>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="6月21日怀旧四区新服开启公告" target="_blank"
+            class="impnews">6月21日怀旧四区新服开启公告</a>
+        </li>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="《经典怀旧•新天龙八部》6月21日全服更新维护公告"
+            target="_blank" class="impnews">《经典怀旧•新天龙八部》6月21日全服更新维护公告</a>
+        </li>
+        <li>
+          <span></span><a href="https://www.123pan.com/s/DANITd-3jZCA.html" title="防范诈骗行为提醒公告" target="_blank"
+            style="font-weight: bold" class="impnews">防范诈骗行为提醒公告</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery.switchable-2.0.js"></script>
+  <script>
+    $(".news p").on("click", function () {
+      $(this).siblings().removeClass("cur");
+      $(this).addClass("cur").next().addClass("cur");
+    });
+    $(function () {
+      $(".banner").switchable({
+        //triggers: '&bull;',  //&bull;应用时，触点样式变为圆点;
+        putTriggers: "insertBefore",
+        effect: "fade",
+        panels: "li",
+        autoplay: true,
+        loop: true, //false时不循环
+        easing: "ease-in-out",
+      });
+    });
+  </script>
+  <link type="text/css" rel="stylesheet" href="css/common-tl-tlhj.css" />
+</body>
+
+</html>
